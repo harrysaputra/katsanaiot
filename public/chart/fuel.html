@@ -1,0 +1,129 @@
+<canvas id="fuelchart" width="400" height="250"></canvas>
+<script>
+
+var ctx = document.getElementById('fuelchart').getContext('2d');
+    var data = {
+  "labels": [
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ],
+  "datasets": [
+    {
+      "label": "2014",
+      "backgroundColor": "#d2affa",
+      "fill": false,
+      "data": [
+        "180",
+        "250",
+        "260",
+        "160",
+        "280",
+        "270",
+        "320"
+      ],
+      "borderColor": "#93379d",
+      "borderWidth": "2",
+      "pointBackgroundColor": "#ffffff",
+      "lineTension": 0
+    }
+  ]
+};
+    var options = {
+  "title": {
+    "display": false,
+    "text": "Fuel Volume",
+    "position": "bottom",
+    "fullWidth": true,
+    "fontColor": "#aa7942",
+    "fontSize": 16
+  },
+  "legend": {
+    "display": false,
+    "fullWidth": false,
+    "position": "top"
+  },
+  "scales": {
+    "yAxes": [
+      {
+        "ticks": {
+          "beginAtZero": true,
+          "display": true,
+          "fontSize": 8
+        },
+        "gridLines": {
+          "display": true,
+          "lineWidth": 1,
+          "drawOnChartArea": true,
+          "drawTicks": true,
+          "tickMarkLength": 1,
+          "offsetGridLines": false,
+          "zeroLineColor": "#942192",
+          "color": "#d6d6d6",
+          "zeroLineWidth": 2
+        },
+        "scaleLabel": {
+          "display": true,
+          "labelString": "Liter"
+        },
+        "display": true
+      }
+    ],
+    "xAxes": {
+      "0": {
+        "ticks": {
+          "display": true,
+          "fontSize": 10,
+          "fontStyle": "italic"
+        },
+        "display": true,
+        "gridLines": {
+          "display": true,
+          "lineWidth": 1,
+          "drawOnChartArea": false,
+          "drawTicks": false,
+          "tickMarkLength": 12,
+          "zeroLineWidth": 2,
+          "offsetGridLines": false,
+          "color": "#942192",
+          "zeroLineColor": "#942192"
+        },
+        "scaleLabel": {
+          "fontSize": 6,
+          "display": true,
+          "fontStyle": "normal"
+        }
+      }
+    }
+  },
+  "tooltips": {
+    "enabled": true,
+    "mode": "label",
+    "caretSize": 6,
+    "backgroundColor": "#3f3f3f",
+    "xPadding": 6,
+    "yPadding": 6,
+    "cornerRadius": 6
+  },
+  "elements": {
+    "arc": {
+      "backgroundColor": "#ff8000"
+    },
+    "line": {
+      "lineTension": 0,
+      "backgroundColor": "#8f39b0"
+    }
+  }
+};
+
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: data,
+        options: options
+    });
+
+
+</script>

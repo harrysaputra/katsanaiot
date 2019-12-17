@@ -1,0 +1,14 @@
+@tailwind base;
+
+@tailwind components;
+
+#menu {
+    @apply absolute bottom-0 p-4;
+}
+
+#menu ul li {
+    display: inline;
+    @apply mr-4;
+}
+
+@tailwind utilities;
