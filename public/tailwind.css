@@ -3,7 +3,7 @@
 @tailwind components;
 
 #menu {
-    @apply absolute bottom-0 p-4;
+    @apply absolute bottom-0 p-6;
 }
 
 #menu ul li {
