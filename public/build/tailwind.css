@@ -601,6 +601,9 @@ video {
 
 body {
   font-family: Roboto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f7fafc;
 }
 
 h1,h2,h3,h4,h5 {
