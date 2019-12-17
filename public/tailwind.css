@@ -3,7 +3,9 @@
 @tailwind components;
 
 #menu {
-    @apply absolute bottom-0 p-6;
+    @apply absolute bottom-0 p-10 w-full text-center;
+    
+
 }
 
 #menu ul li {
