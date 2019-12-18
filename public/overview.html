@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="build/tailwind.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/chart.js"></script>
+  <title>Welcome to Tailwind!</title>
+</head>
+<body>
+    
+        <div class="flex flex-wrap">
+            
+            <div class="w-full">
+                
+                <div id="navigation-wrapper" class="w-full bg-white shadow"></div>
+                
+                <div id="header-section" class="px-4 text-center mx-auto mt-6">
+                  <h1 class="text-2xl md:text-4xl leading-none">Tradewinds Plantations Berhad</h1>
+                  <span class=" block text-lg mt-2 md:text-2xl font-light leading-tight text-gray-600">Skid Tank Monitoring Platform</span>
+                  <span class="block mt-4">Welcome, Syed Ahmad</span>
+                </div>
+
+                <div id="overview-section" class="mt-4">
+                    <div class="overview-header p-4 w-full flex">
+                        <div class="relative inline-block w-1/2 mr-2">
+                            <select class="block appearance-none w-full bg-white border border-gray-500 text-gray-700 py-2 px-4 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                              <option>All Zone</option>
+                              <option>Kuala Lumpur</option>
+                              <option>Penang</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                            </div>
+                        </div>
+                        <div class="relative inline-block w-1/2">
+                            <select class="block appearance-none w-full bg-white border border-gray-500 text-gray-700 py-2 px-4 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                              <option>Date Filter</option>
+                              <option>This Week</option>
+                              <option>This Month</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <svg class="fill-current h-4 w-4" viewBox="0 0 36.447 36.447" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m30.224 3.948h-1.098v-1.198c0-1.517-1.197-2.75-2.67-2.75-1.474 0-2.67 1.233-2.67 2.75v1.197h-2.74v-1.197c0-1.517-1.197-2.75-2.67-2.75s-2.67 1.233-2.67 2.75v1.197h-2.74v-1.197c0-1.517-1.197-2.75-2.67-2.75s-2.67 1.233-2.67 2.75v1.197h-1.402c-2.343 0-4.25 1.907-4.25 4.25v24c0 2.343 1.907 4.25 4.25 4.25h24c2.344 0 4.25-1.907 4.25-4.25v-24c0-2.342-1.907-4.249-4.25-4.249zm-4.938-1.198c0-0.689 0.525-1.25 1.17-1.25 0.646 0 1.17 0.561 1.17 1.25v4.896c0 0.689-0.524 1.25-1.17 1.25-0.645 0-1.17-0.561-1.17-1.25v-4.896zm-8.08 0c0-0.689 0.525-1.25 1.17-1.25s1.17 0.561 1.17 1.25v4.896c0 0.689-0.525 1.25-1.17 1.25s-1.17-0.561-1.17-1.25v-4.896zm-8.081 0c0-0.689 0.525-1.25 1.17-1.25s1.17 0.561 1.17 1.25v4.896c0 0.689-0.525 1.25-1.17 1.25s-1.17-0.561-1.17-1.25v-4.896zm22.849 29.448c0 0.965-0.785 1.75-1.75 1.75h-24c-0.965 0-1.75-0.785-1.75-1.75v-22h27.5v22z"/>
+                                    <rect x="6.724" y="14.626" width="4.595" height="4.089"/>
+                                    <rect x="12.857" y="14.626" width="4.596" height="4.089"/>
+                                    <rect x="18.995" y="14.626" width="4.595" height="4.089"/>
+                                    <rect x="25.128" y="14.626" width="4.596" height="4.089"/>
+                                    <rect x="6.724" y="20.084" width="4.595" height="4.086"/>
+                                    <rect x="12.857" y="20.084" width="4.596" height="4.086"/>
+                                    <rect x="18.995" y="20.084" width="4.595" height="4.086"/>
+                                    <rect x="25.128" y="20.084" width="4.596" height="4.086"/>
+                                    <rect x="6.724" y="25.54" width="4.595" height="4.086"/>
+                                    <rect x="12.857" y="25.54" width="4.596" height="4.086"/>
+                                    <rect x="18.995" y="25.54" width="4.595" height="4.086"/>
+                                    <rect x="25.128" y="25.54" width="4.596" height="4.086"/>
+                            </svg>
+                            
+                            </div>
+                        </div>                    
+                    </div>
+                    <div class="overview-body">
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            
+        </div>
+
+    <div id="menu"></div>
+    <script>
+      $("#navigation-wrapper").load("components/navigation.html");
+      $("#menu").load("menu.html");
+    </script>
+</body>
+</html>

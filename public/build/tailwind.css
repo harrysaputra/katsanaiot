@@ -11433,8 +11433,8 @@ h1,h2,h3,h4,h5 {
 
 .slideout-panel {
   position: absolute;
-  z-index: 1;
-  top:1rem;
+  z-index: 10;
+  bottom:1rem;
   left:1rem;
 }
 
