@@ -1,10 +1,32 @@
-<ul class="text-sm mb-2">
-    <li class="font-bold uppercase text-xs">Features</li>
-    <li><a href="index.html">login</a></li>
-    <li><a href="topwidget.html">Top Widget</a></li>
-    <li><a href="chart.html">Chart Widget</a></li>
-</ul>    
-<ul class="text-sm">
-    <li class="font-bold uppercase text-xs">Section</li>
-    <li><a href="header.html">Menu & Header</a></li>
-</ul>    
+<nav id="slideout-menu" class="shadow bg-white p-8">
+    <ul class="text-sm mb-8">
+        <li class="font-bold uppercase text-xs">Features</li>
+        <li><a href="index.html">login</a></li>
+        <li><a href="topwidget.html">Top Widget</a></li>
+        <li><a href="chart.html">Chart Widget</a></li>
+    </ul>    
+    <ul class="text-sm">
+        <li class="font-bold uppercase text-xs">Section</li>
+        <li><a href="header.html">Menu & Header</a></li>
+    </ul>        
+</nav>
+
+<main id="panel">
+    <header>
+        <button class="toggle-button text-sm bg-gray-700 text-white py-1 px-2 rounded">Menu</button>
+    </header>
+</main>
+
+<script src="js/slideout.js"></script>
+<script>
+    var slideout = new Slideout({
+        'panel': document.getElementById('panel'),
+        'menu': document.getElementById('slideout-menu')
+    });
+
+    // Toggle button
+    document.querySelector('.toggle-button').addEventListener('click', function() {
+        slideout.toggle();
+    });
+</script>
+

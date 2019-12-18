@@ -603,7 +603,7 @@ body {
   font-family: Roboto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f7fafc;
+  background-color: #edf2f7;
 }
 
 h1,h2,h3,h4,h5 {
@@ -636,26 +636,6 @@ h1,h2,h3,h4,h5 {
   .container {
     max-width: 1280px;
   }
-}
-
-#menu {
-  position: absolute;
-  bottom: 0;
-  padding: 2.5rem;
-  width: 100%;
-  text-align: center;
-}
-
-#menu ul li {
-  display: inline;
-  margin-right: 1rem;
-}
-
-.site-nav ul li a {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 .sr-only {
@@ -11426,6 +11406,47 @@ h1,h2,h3,h4,h5 {
 
 .z-auto {
   z-index: auto;
+}
+
+/* Custom CSS for 3rd Party */
+
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+  z-index: 0;
+  display: none;
+}
+
+.slideout-menu ul li {
+  margin-bottom: 0.5rem;
+}
+
+.slideout-menu-left {
+  left: 0;
+}
+
+.slideout-menu-right {
+  right: 0;
+}
+
+.slideout-panel {
+  position: absolute;
+  z-index: 1;
+  top:1rem;
+  left:1rem;
+}
+
+.slideout-open,
+  .slideout-open body,
+  .slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+  overflow:hidden;
 }
 
 @media (min-width: 640px) {
