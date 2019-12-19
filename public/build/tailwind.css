@@ -638,6 +638,28 @@ h1,h2,h3,h4,h5 {
   }
 }
 
+.flex-table {
+  text-align: left;
+}
+
+.flex-table .row {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-table .col {
+  margin-right: 0.5rem;
+}
+
+.flex-table .col:last-child {
+  margin-right: 0;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -11432,7 +11454,7 @@ h1,h2,h3,h4,h5 {
 }
 
 .slideout-panel {
-  position: fixed;
+  position: fixed ;
   z-index: 10;
   bottom:1rem;
   left:1rem;

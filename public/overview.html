@@ -18,7 +18,7 @@
             
             <div class="w-full">
                 
-                <div id="navigation-wrapper" class="w-full bg-white shadow"></div>
+                <div id="navigation-wrapper" class="w-full bg-white shadow-xl"></div>
                 
                 <div id="header-section" class="px-4 py-8 text-center mx-auto bg-gray-800 text-white">
                   <h1 class="text-2xl md:text-4xl leading-none">Tradewinds Plantations Berhad</h1>
@@ -70,17 +70,62 @@
                         <h3 class="text-gray-700">SBU Northwest (83 Assets)</h3>
                     </div>
 
-                    <div class="overview-body bg-white border-t-0  shadow-lg p-4 mx-4  flex flex-wrap">
+                    <div class="overview-body bg-white border-t-0 mb-4 rounded-b-lg shadow-lg p-4 mx-4  flex flex-wrap">
 
                         <div class="chart-widget max-w-xs mx-auto h-auto mb-4">
-                            <h3 class="font-bold text-sm mb-2 text-gray-500">Fuel Volume</h3>
+                            <h3 class="text-sm mb-2 text-gray-500">Fuel Volume</h3>
                             <div id="fuelchart-wrapper"></div>
                         </div>
                         
                         <div class="chart-widget max-w-xs mx-auto h-auto">
-                            <h3 class="font-bold text-sm mb-2 text-gray-500">Daily Received VS Issue</h3>
+                            <h3 class="text-sm mb-2 text-gray-500">Daily Received VS Issue</h3>
                             <div id="dailyreceived-wrapper"></div>
-                        </div>        
+                        </div>
+                        
+                        <div class="overview-summary flex-1">
+                            <h3 class="text-sm mb-2 text-gray-500">Summary</h3>
+                            <div class="flex-table text-gray-700 text-sm"
+                            >   
+                                <!-- Content -->
+                                <div class="row">
+                                    <div class="col">
+                                        10
+                                    </div>
+                                    <div class="col flex-1">
+                                        Opening Balance
+                                    </div>
+                                    <div class="col text-right font-bold text-gray-700">
+                                        322,672 L
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        10
+                                    </div>
+                                    <div class="col flex-1">
+                                        Received
+                                    </div>
+                                    <div class="col text-right text-blue-700 font-bold">
+                                        322,672 L
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        10
+                                    </div>
+                                    <div class="col flex-1">
+                                        Issue
+                                    </div>
+                                    <div class="col text-right text-red-700 font-bold">
+                                        322,672 L
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
                     </div>
 
                 </div>

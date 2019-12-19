@@ -10,6 +10,22 @@ h1,h2,h3,h4,h5 {
 
 @tailwind components;
 
+.flex-table {
+    @apply text-left;
+}
+
+.flex-table .row {
+    @apply flex flex-row justify-between;
+}
+
+.flex-table .col {
+    @apply mr-2;
+}
+
+.flex-table .col:last-child {
+    @apply mr-0;
+}
+
 @tailwind utilities;
 
 /* Custom CSS for 3rd Party */
@@ -36,7 +52,7 @@ h1,h2,h3,h4,h5 {
   }
   
   .slideout-panel {
-    position: fixed;
+    position: fixed ;
     z-index: 10;
     bottom:1rem;
     left:1rem;
