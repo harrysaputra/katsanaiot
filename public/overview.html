@@ -29,7 +29,7 @@
                 <div id="overview-section" class="mt-8 md:mt-16 md:max-w-6xl md:mx-auto">
                     <div class="overview-setting px-4 w-full flex flex-wrap items-center">
                         <div class="relative inline-block w-40 mr-2">
-                            <select class="block appearance-none w-full bg-white border border-gray-500 text-gray-700 py-2 px-4 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                            <select class="block appearance-none w-full bg-white border border-gray-700 text-gray-700 py-2 px-4 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                               <option>All Zone</option>
                               <option>Kuala Lumpur</option>
                               <option>Penang</option>
@@ -70,14 +70,14 @@
                         <h3 class="text-gray-700">SBU Northwest (83 Assets)</h3>
                     </div>
 
-                    <div class="overview-body bg-white border-t-0 mb-4 rounded-b-lg shadow-lg p-4 mx-4  flex flex-wrap">
+                    <div class="overview-body bg-white border-t-0 mb-4 rounded-b-lg shadow-lg p-4 md:p-8 mx-4  flex flex-wrap">
 
-                        <div class="chart-widget max-w-xs mx-auto h-auto mb-4">
+                        <div class="chart-widget max-w-xs mx-auto h-auto mb-4 md:mb-0 md:mr-16">
                             <h3 class="text-sm mb-2 text-gray-500">Fuel Volume</h3>
                             <div id="fuelchart-wrapper"></div>
                         </div>
                         
-                        <div class="chart-widget max-w-xs mx-auto h-auto">
+                        <div class="chart-widget max-w-xs mx-auto h-auto mb-4 md:mb-0 md:mr-16">
                             <h3 class="text-sm mb-2 text-gray-500">Daily Received VS Issue</h3>
                             <div id="dailyreceived-wrapper"></div>
                         </div>
@@ -88,8 +88,8 @@
                             >   
                                 <!-- Content -->
                                 <div class="row">
-                                    <div class="col">
-                                        10
+                                    <div class="col w-10">
+                                        100
                                     </div>
                                     <div class="col flex-1">
                                         Opening Balance
@@ -100,29 +100,51 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col">
-                                        10
+                                    <div class="col w-10">
+                                        1000
                                     </div>
                                     <div class="col flex-1">
                                         Received
                                     </div>
                                     <div class="col text-right text-blue-700 font-bold">
-                                        322,672 L
+                                        + 22,672 L
                                     </div>
                                 </div>
 
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col w-10">
                                         10
                                     </div>
                                     <div class="col flex-1">
                                         Issue
                                     </div>
                                     <div class="col text-right text-red-700 font-bold">
-                                        322,672 L
+                                        - 191,672 L
+                                    </div>
+                                </div>
+
+                                <div class="row border-t border-gray-500 mt-2 pt-2">
+                                    <div class="col w-10">
+                                        
+                                    </div>
+                                    <div class="col flex-1">
+                                        CLosing Balance
+                                    </div>
+                                    <div class="col text-right text-green-700 font-bold">
+                                        152,672 L
                                     </div>
                                 </div>
                                 
+                                <div class="row legend mt-6 mb-8">
+                                    <h3 class="uppercase">Tank level</h3>
+                                    <ul class="flex flex-wrap">
+                                        <li class="mr-2"><span class="h-3 w-3 align-baseline bg-gray-800 inline-block rounded-full mr-2 border border-3 border-gray-700"></span>22</li>
+                                        <li class="mr-2"><span class="h-3 w-3 align-baseline bg-gray-200 inline-block rounded-full mr-2 border border-3 border-gray-700"></span>22</li>
+                                        <li class="mr-2"><span class="h-3 w-3 align-baseline bg-yellow-400 inline-block rounded-full mr-2 border border-3 border-gray-700"></span>22</li>
+                                        <li class="mr-2"><span class="h-3 w-3 align-baseline bg-pink-600 inline-block rounded-full mr-2 border border-3 border-gray-700"></span>22</li>      
+                                    </ul>
+                                </div>
+
                             </div>
                         </div>
                         

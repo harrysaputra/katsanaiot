@@ -47,7 +47,7 @@ var ctx = document.getElementById('dailyreceived').getContext('2d');
     var options = {
   "title": {
     "display": false,
-    "text": "Ad Revenue Comparison 2014-2015",
+    "text": "",
     "position": "bottom",
     "fullWidth": true,
     "fontColor": "#aa7942",
@@ -63,7 +63,8 @@ var ctx = document.getElementById('dailyreceived').getContext('2d');
       {
         "ticks": {
           "beginAtZero": true,
-          "display": true
+          "display": true,
+          "fontSize": 8
         },
         "gridLines": {
           "display": true,
@@ -87,7 +88,7 @@ var ctx = document.getElementById('dailyreceived').getContext('2d');
       "0": {
         "ticks": {
           "display": true,
-          "fontSize": 9,
+          "fontSize": 8,
           "fontStyle": "normal"
         },
         "display": true,
@@ -97,7 +98,7 @@ var ctx = document.getElementById('dailyreceived').getContext('2d');
           "drawOnChartArea": false,
           "drawTicks": true,
           "tickMarkLength": 12,
-          "zeroLineWidth": 2,
+          "zeroLineWidth": 1,
           "offsetGridLines": true,
           "color": "#942192",
           "zeroLineColor": "#942192"
