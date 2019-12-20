@@ -15,7 +15,7 @@ h1,h2,h3,h4,h5 {
 }
 
 .flex-table .row {
-    @apply flex flex-row justify-between;
+    @apply flex justify-between;
 }
 
 .flex-table .col {
@@ -26,7 +26,15 @@ h1,h2,h3,h4,h5 {
     @apply mr-0;
 }
 
+/* Custom CSS */
+.bullet {
+    @apply h-3 w-3 align-baseline bg-gray-500 inline-block rounded-full mr-2 border border-gray-700;
+}
+
 @tailwind utilities;
+
+
+
 
 /* Custom CSS for 3rd Party */
 

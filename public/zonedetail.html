@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="build/tailwind.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/chart.js"></script>
+  <title>Zone Detail Page</title>
+</head>
+<body>
+    
+        <div class="flex flex-wrap">
+            
+            <div class="w-full">
+                
+                <div id="navigation-wrapper" class="w-full bg-white shadow-xl"></div>
+                
+                <div id="header-section" class="px-4 py-8 text-center mx-auto bg-gray-800 text-white md:py-20">
+                  <label class="text-xl md:text-4xl leading-none font-light">SBU Northwest</label>
+                  <span class=" block md:text-md text-blue-200">Tradewinds Plantation Berhad</span>
+                  <span class="block mt-6 md:mt-8">Area General Manager</span>
+                  <span class="block text-xs">Ahmad Justin +62 100 1000</span>
+                </div>
+
+                <div id="overview-section" class="mt-8 md:mt-16 md:max-w-6xl md:mx-auto">
+
+                    <div class="overview-setting px-4 w-full flex flex-wrap items-center justify-between align-middle md:justify-start">
+                        <div class="relative inline-block w-40 mr-2">
+                            <select class="block appearance-none w-full bg-white border border-gray-700 text-gray-700 py-2 px-4 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                              <option>All Zone</option>
+                              <option>Kuala Lumpur</option>
+                              <option>Penang</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                            </div>
+                        </div>
+                        <div class="relative inline-block w-40 md:mr-2">
+                            <select class="block appearance-none w-full bg-white border border-gray-500 text-gray-700 py-2 px-4 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                              <option>This Week</option>
+                              <option>This Month</option>
+                              <option>Custom</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <svg class="fill-current h-4 w-4" viewBox="0 0 36.447 36.447" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m30.224 3.948h-1.098v-1.198c0-1.517-1.197-2.75-2.67-2.75-1.474 0-2.67 1.233-2.67 2.75v1.197h-2.74v-1.197c0-1.517-1.197-2.75-2.67-2.75s-2.67 1.233-2.67 2.75v1.197h-2.74v-1.197c0-1.517-1.197-2.75-2.67-2.75s-2.67 1.233-2.67 2.75v1.197h-1.402c-2.343 0-4.25 1.907-4.25 4.25v24c0 2.343 1.907 4.25 4.25 4.25h24c2.344 0 4.25-1.907 4.25-4.25v-24c0-2.342-1.907-4.249-4.25-4.249zm-4.938-1.198c0-0.689 0.525-1.25 1.17-1.25 0.646 0 1.17 0.561 1.17 1.25v4.896c0 0.689-0.524 1.25-1.17 1.25-0.645 0-1.17-0.561-1.17-1.25v-4.896zm-8.08 0c0-0.689 0.525-1.25 1.17-1.25s1.17 0.561 1.17 1.25v4.896c0 0.689-0.525 1.25-1.17 1.25s-1.17-0.561-1.17-1.25v-4.896zm-8.081 0c0-0.689 0.525-1.25 1.17-1.25s1.17 0.561 1.17 1.25v4.896c0 0.689-0.525 1.25-1.17 1.25s-1.17-0.561-1.17-1.25v-4.896zm22.849 29.448c0 0.965-0.785 1.75-1.75 1.75h-24c-0.965 0-1.75-0.785-1.75-1.75v-22h27.5v22z"/>
+                                    <rect x="6.724" y="14.626" width="4.595" height="4.089"/>
+                                    <rect x="12.857" y="14.626" width="4.596" height="4.089"/>
+                                    <rect x="18.995" y="14.626" width="4.595" height="4.089"/>
+                                    <rect x="25.128" y="14.626" width="4.596" height="4.089"/>
+                                    <rect x="6.724" y="20.084" width="4.595" height="4.086"/>
+                                    <rect x="12.857" y="20.084" width="4.596" height="4.086"/>
+                                    <rect x="18.995" y="20.084" width="4.595" height="4.086"/>
+                                    <rect x="25.128" y="20.084" width="4.596" height="4.086"/>
+                                    <rect x="6.724" y="25.54" width="4.595" height="4.086"/>
+                                    <rect x="12.857" y="25.54" width="4.596" height="4.086"/>
+                                    <rect x="18.995" y="25.54" width="4.595" height="4.086"/>
+                                    <rect x="25.128" y="25.54" width="4.596" height="4.086"/>
+                                </svg>
+                            
+                            </div>
+                        </div>    
+                        <span class="text-xs md:text-sm mt-4 md:mt-0  text-gray-500 md:ml-2">Displaying data 1st to 7th Sep 2019</span>
+                        <div class="flex ml-auto">
+                            <button class="bg-gray-200 text-white px-2 py-1 rounded mt-4 md:mt-0 shadow-md border-gray-500 border mr-2 ">
+                                <svg class="h-6" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <g transform="translate(0 -1028.4)">
+                                    <path transform="translate(0 1028.4)" d="m12 0c-4.4183 2.3685e-15 -8 3.5817-8 8 0 1.421 0.3816 2.75 1.0312 3.906 0.1079 0.192 0.221 0.381 0.3438 0.563l6.625 11.531 6.625-11.531c0.102-0.151 0.19-0.311 0.281-0.469l0.063-0.094c0.649-1.156 1.031-2.485 1.031-3.906 0-4.4183-3.582-8-8-8zm0 4c2.209 0 4 1.7909 4 4 0 2.209-1.791 4-4 4-2.2091 0-4-1.791-4-4 0-2.2091 1.7909-4 4-4z" fill="#e74c3c"/>
+                                    <path transform="translate(0 1028.4)" d="m12 3c-2.7614 0-5 2.2386-5 5 0 2.761 2.2386 5 5 5 2.761 0 5-2.239 5-5 0-2.7614-2.239-5-5-5zm0 2c1.657 0 3 1.3431 3 3s-1.343 3-3 3-3-1.3431-3-3 1.343-3 3-3z" fill="#c0392b"/>
+                                    </g>
+                                    </svg>
+                            </button>
+                            <button class="bg-green-500 text-white px-4 py-1 rounded mt-4 md:mt-0 shadow-md border-green-600 border">Export</button>
+                        </div>                
+                    </div>
+
+                    <!-- Overview Widget -->
+                    <div class="overview-widget mb-8">
+
+                        <h3 class="mx-4 text-xl mt-6">Location (1)</h3>
+
+                        <div class="overview-header mx-4 mt-4 shadow-lg bg-gray-100 px-4 py-2 border-gray-400 rounded-t-lg hover:bg-blue-100 cursor-pointer">
+                            <h3 class="text-gray-700">Ladang Tanah Merah (3 Assets)</h3>
+                        </div>
+
+                        <div class="overview-body bg-white border-t-0 mb-4 rounded-b-lg shadow-lg p-4 md:p-8 md:pb-0 mx-4 flex flex-wrap">
+
+                            <div class="chart-widget max-w-xs mx-auto h-auto mb-4 md:mb-0 md:mr-8">
+                                <h3 class="text-sm mb-2 text-gray-500">Fuel Volume</h3>
+                                <div class="fuelchart-wrapper"></div>
+                            </div>
+                            
+                            <div class="chart-widget max-w-xs mx-auto h-auto mb-4 md:mb-0 md:mr-8">
+                                <h3 class="text-sm mb-2 text-gray-500">Daily Received VS Issue</h3>
+                                <div class="dailyreceived-wrapper"></div>
+                            </div>
+                            
+                            <div class="overview-summary flex-1">
+                                <h3 class="text-sm mb-2 text-gray-500">Summary</h3>
+                                <div class="flex-table text-gray-700 text-sm"
+                                >   
+                                    <!-- Content -->
+                                    <div class="row">
+                                        <div class="col w-10">
+                                            100
+                                        </div>
+                                        <div class="col flex-1">
+                                            Opening Balance
+                                        </div>
+                                        <div class="col text-right text-gray-700">
+                                            322,672 L
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col w-10">
+                                            1000
+                                        </div>
+                                        <div class="col flex-1">
+                                            Received
+                                        </div>
+                                        <div class="col text-right text-blue-700">
+                                            + 22,672 L
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col w-10">
+                                            10
+                                        </div>
+                                        <div class="col flex-1">
+                                            Issue
+                                        </div>
+                                        <div class="col text-right text-red-700">
+                                            - 191,672 L
+                                        </div>
+                                    </div>
+
+                                    <div class="row border-t border-gray-500 mt-2 pt-2">
+                                        <div class="col w-10">
+                                            
+                                        </div>
+                                        <div class="col font-bold flex-1">
+                                            Closing Balance
+                                        </div>
+                                        <div class="col text-right text-green-700 font-bold">
+                                            152,672 L
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row legend mt-6 mb-8 justify-between">
+                                        <h3 class="uppercase text-xs">Tank level</h3>
+                                        <ul class="flex flex-wrap">
+                                            <li class="mr-2"><span class="bullet"></span>22</li>
+                                            <li class="mr-2"><span class="bullet bg-gray-200"></span>22</li>
+                                            <li class="mr-2"><span class="bullet bg-yellow-400"></span>22</li>
+                                            <li><span class="bullet bg-pink-600"></span>22</li>      
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>                  
+
+                    <!-- Assets Widget -->
+                    <div class="overview-widget mb-8">
+
+                        <h3 class="mx-4 text-xl mt-6">Assets (83)</h3>
+
+                        <div class="assets-table mx-4 mt-4 shadow-lg border-gray-400 rounded-t-lg flex-table overflow-x-scroll md:overflow-x-auto bg-white text-sm">
+
+                            <!-- Table Header -->
+                            <div class="inline-flex px-4 py-2 bg-gray-100 hover:bg-blue-100 cursor-pointer font-bold text-gray-600 inline-flex border-b border-gray-400 md:w-full ">
+                                <div class="col w-24">
+                                    Status
+                                </div>
+                                <div class="col w-24">
+                                    Tank Name
+                                </div>
+                                <div class="col w-24">
+                                    Liquid Type
+                                </div>
+                                <div class="col w-24">
+                                    Capacity
+                                </div>
+                                <div class="col w-32">
+                                    Opening Balance
+                                </div>
+                                <div class="col w-24">
+                                    Received
+                                </div>
+                                <div class="col w-24">
+                                    Issued
+                                </div>
+                                <div class="col w-32">
+                                    Closing Balance
+                                </div>                                                                
+                            </div>
+
+                            <!-- Table Content -->
+                            <div class="inline-flex px-4 py-2">
+                                <div class="col w-24">
+                                    <span class="bullet bg-green-600 mr-1"></span>
+                                    Healthy
+                                </div>
+                                <div class="col w-24">
+                                    Tank #1001
+                                </div>
+                                <div class="col w-24">
+                                    Diesel
+                                </div>
+                                <div class="col w-24">
+                                    4000L
+                                </div>
+                                <div class="col w-32">
+                                    3500L (87.5%)
+                                </div>
+                                <div class="col w-24">
+                                    -
+                                </div>
+                                <div class="col w-24">
+                                    300L
+                                </div>
+                                <div class="col w-32">
+                                    3200L (80%)
+                                </div>                                                                
+                            </div>
+                            <div class="inline-flex px-4 py-2">
+                                <div class="col w-24">
+                                    <span class="bullet bg-orange-500 mr-1"></span>
+                                    Moderate
+                                </div>
+                                <div class="col w-24">
+                                    Tank #1002
+                                </div>
+                                <div class="col w-24">
+                                    Diesel
+                                </div>
+                                <div class="col w-24">
+                                    4000L
+                                </div>
+                                <div class="col w-32">
+                                    3500L (87.5%)
+                                </div>
+                                <div class="col w-24">
+                                    -
+                                </div>
+                                <div class="col w-24">
+                                    300L
+                                </div>
+                                <div class="col w-32">
+                                    3200L (80%)
+                                </div>                                                                
+                            </div>
+                            <div class="inline-flex px-4 py-2">
+                                <div class="col w-24">
+                                    <span class="bullet bg-yellow-500 mr-1"></span>
+                                    Low
+                                </div>
+                                <div class="col w-24">
+                                    Tank #1003
+                                </div>
+                                <div class="col w-24">
+                                    Diesel
+                                </div>
+                                <div class="col w-24">
+                                    4000L
+                                </div>
+                                <div class="col w-32">
+                                    3500L (87.5%)
+                                </div>
+                                <div class="col w-24">
+                                    -
+                                </div>
+                                <div class="col w-24">
+                                    300L
+                                </div>
+                                <div class="col w-32">
+                                    3200L (80%)
+                                </div>                                                                
+                            </div>
+                            <div class="inline-flex px-4 py-2">
+                                <div class="col w-24">
+                                    <span class="bullet bg-red-600 mr-1"></span>
+                                    Empty
+                                </div>
+                                <div class="col w-24">
+                                    Tank #1004
+                                </div>
+                                <div class="col w-24">
+                                    Diesel
+                                </div>
+                                <div class="col w-24">
+                                    4000L
+                                </div>
+                                <div class="col w-32">
+                                    3500L (87.5%)
+                                </div>
+                                <div class="col w-24">
+                                    -
+                                </div>
+                                <div class="col w-24">
+                                    300L
+                                </div>
+                                <div class="col w-32">
+                                    3200L (80%)
+                                </div>                                                                
+                            </div>                                                                                    
+                        </div>
+
+
+                </div>
+
+
+            </div>
+            
+        </div>
+
+    <div id="menu"></div>
+    <script>
+        $("#navigation-wrapper").load("components/navigation.html");
+        $("#menu").load("menu.html");
+        $(".fuelchart-wrapper").load("chart/fuel.html");
+        $(".dailyreceived-wrapper").load("chart/dailyreceived.html");
+    </script>
+</body>
+</html>
