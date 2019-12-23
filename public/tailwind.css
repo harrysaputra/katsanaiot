@@ -31,6 +31,30 @@ h1,h2,h3,h4,h5 {
     @apply h-3 w-3 align-baseline bg-gray-500 inline-block rounded-full mr-2 border border-gray-700;
 }
 
+.btn-group {
+  @apply rounded-lg bg-gray-200 border border-gray-400;
+}
+
+.btn-group button {
+  @apply px-4 py-2 border-r border-gray-400;
+}
+
+.btn-group button.active {
+  @apply bg-gray-100;
+}
+
+.btn-group button.active:first-child {
+  @apply rounded-tl-lg rounded-bl-lg border-t-0 border-b-0 border-gray-400;
+}
+
+.btn-group button:first-child {
+  
+}
+
+.btn-group button:last-child {
+  @apply border-r-0;
+}
+
 @tailwind utilities;
 
 

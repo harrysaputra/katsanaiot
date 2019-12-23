@@ -159,8 +159,8 @@
                                         <h3 class="uppercase text-xs">Tank level</h3>
                                         <ul class="flex flex-wrap">
                                             <li class="mr-2 tooltip" title="Health"><span class="bullet"></span>22</li>
-                                            <li class="mr-2 tooltip" title="Health"><span class="bullet bg-gray-200"></span>22</li>
-                                            <li class="mr-2 tooltip" title="Health"><span class="bullet bg-yellow-400"></span>22</li>
+                                            <li class="mr-2 tooltip" title="Moderate"><span class="bullet bg-gray-200"></span>22</li>
+                                            <li class="mr-2 tooltip" title="Low"><span class="bullet bg-yellow-400"></span>22</li>
                                             <li class="tooltip" title="Empty"><span class="bullet bg-pink-600"></span>22</li>      
                                         </ul>
                                     </div>
@@ -176,7 +176,14 @@
 
                         <h3 class="mx-4 text-xl mt-6">Assets (83)</h3>
 
-                        <div class="assets-table mx-4 mt-4 shadow-lg border-gray-400 rounded-t-lg flex-table overflow-x-scroll md:overflow-x-auto bg-white text-sm">
+                        <div class="btn-group mx-4 mt-6 flex flex-no-wrap justify-between">
+                            <button class="active">Healthy</button>
+                            <button>Moderate</button>
+                            <button>Low</button>
+                            <button>Empty</button>
+                        </div>
+
+                        <div class="assets-table mx-4 mt-6 shadow-lg border-gray-400 rounded-t-lg flex-table overflow-x-scroll md:overflow-x-auto bg-white text-sm">
 
                             <!-- Table Header -->
                             <div class="inline-flex px-4 py-2 bg-gray-100 hover:bg-blue-100 cursor-pointer font-bold text-gray-600 inline-flex border-b border-gray-400 md:w-full ">
