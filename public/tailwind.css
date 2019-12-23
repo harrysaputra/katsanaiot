@@ -55,6 +55,31 @@ h1,h2,h3,h4,h5 {
   @apply border-r-0;
 }
 
+.table-wrapper {
+  @apply text-left;
+}
+
+.table-wrapper table {
+  @apply table-fixed w-full;
+}
+
+.table-wrapper td {
+  @apply bg-white;
+}
+
+.table-wrapper th, .table-wrapper td {
+  @apply px-4 py-2;
+}
+
+.table-wrapper th {
+  @apply bg-blue-100 py-4;
+}
+
+.table-wrapper tbody tr:first-child {
+  @apply border-t border-gray-400;
+}
+
+
 @tailwind utilities;
 
 
