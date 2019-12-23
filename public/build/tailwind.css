@@ -721,21 +721,29 @@ h1,h2,h3,h4,h5 {
 }
 
 .table-wrapper th, .table-wrapper td {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .table-wrapper th {
   background-color: #ebf8ff;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .table-wrapper tbody tr:first-child {
   border-top-width: 1px;
   border-color: #cbd5e0;
+}
+
+.table-wrapper tbody tr:first-child td {
+  padding-top: 0.75rem;
+}
+
+.table-wrapper tbody tr:last-child td {
+  padding-bottom: 1rem;
 }
 
 .sr-only {

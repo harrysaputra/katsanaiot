@@ -68,17 +68,24 @@ h1,h2,h3,h4,h5 {
 }
 
 .table-wrapper th, .table-wrapper td {
-  @apply px-4 py-2;
+  @apply px-3 py-1;
 }
 
 .table-wrapper th {
-  @apply bg-blue-100 py-4;
+  @apply bg-blue-100 py-2;
 }
 
 .table-wrapper tbody tr:first-child {
   @apply border-t border-gray-400;
 }
 
+.table-wrapper tbody tr:first-child td {
+  @apply pt-3;
+}
+
+.table-wrapper tbody tr:last-child td {
+  @apply pb-4;
+}
 
 @tailwind utilities;
 
