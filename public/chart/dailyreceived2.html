@@ -1,0 +1,128 @@
+<canvas class="dailyreceived2" style="width:100%; height:100%;"></canvas>
+<script>
+
+var ctx = document.getElementsByClassName('dailyreceived2');
+    var data = {
+  "labels": [
+    "FY01",
+    "FY02",
+    "FY03",
+    "FY04",
+    "FY05",
+    "FY06"
+  ],
+  "datasets": [
+    {
+      "label": "Daily Received",
+      "backgroundColor": "#e7c1e8",
+      "fill": true,
+      "data": [
+        "230",
+        "250",
+        "260",
+        "240",
+        "280",
+        "270"
+      ],
+      "borderColor": "#a246b5",
+      "borderWidth": "1"
+    },
+    {
+      "label": "Issued",
+      "backgroundColor": "#c2f8d0",
+      "fill": true,
+      "data": [
+        "200",
+        "300",
+        "280",
+        "270",
+        "300",
+        "295"
+      ],
+      "borderColor": "#6cdb80",
+      "borderWidth": "1"
+    }
+  ]
+};
+    var options = {
+  "title": {
+    "display": false,
+    "text": "",
+    "position": "bottom",
+    "fullWidth": true,
+    "fontColor": "#aa7942",
+    "fontSize": 16
+  },
+  "legend": {
+    "display": true,
+    "fullWidth": true,
+    "position": "top",
+  },
+  "scales": {
+    "yAxes": [
+      {
+        "ticks": {
+          "beginAtZero": true,
+          "display": true,
+          "fontSize": 8
+        },
+        "gridLines": {
+          "display": true,
+          "lineWidth": 1,
+          "drawOnChartArea": true,
+          "drawTicks": true,
+          "tickMarkLength": 1,
+          "offsetGridLines": true,
+          "zeroLineColor": "#c0c0c0",
+          "color": "#d6d6d6",
+          "zeroLineWidth": 1
+        },
+        "scaleLabel": {
+          "display": true,
+          "labelString": "Amount"
+        },
+        "display": true
+      }
+    ],
+    "xAxes": {
+      "0": {
+        "ticks": {
+          "display": true,
+          "fontSize": 8,
+          "fontStyle": "normal"
+        },
+        "display": true,
+        "gridLines": {
+          "display": true,
+          "lineWidth": 1,
+          "drawOnChartArea": false,
+          "drawTicks": true,
+          "tickMarkLength": 12,
+          "zeroLineWidth": 1,
+          "offsetGridLines": true,
+          "color": "#942192",
+          "zeroLineColor": "#942192"
+        },
+        "scaleLabel": {
+          "fontSize": 16,
+          "display": true,
+          "fontStyle": "normal"
+        }
+      }
+    }
+  },
+  "tooltips": {
+    "enabled": true,
+    "mode": "label",
+    "caretSize": 10,
+    "backgroundColor": "#00fa92"
+  }
+};
+
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: data,
+        options: options
+    });
+
+</script>
