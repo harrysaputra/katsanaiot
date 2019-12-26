@@ -40,8 +40,13 @@ h1,h2,h3,h4,h5 {
 }
 
 .btn-group button.active {
+  @apply bg-white;
+}
+
+.btn-group button:hover {
   @apply bg-gray-100;
 }
+
 
 .btn-group button.active:first-child {
   @apply rounded-tl-lg rounded-bl-lg border-t-0 border-b-0 border-gray-400;
@@ -63,9 +68,19 @@ h1,h2,h3,h4,h5 {
   @apply table-fixed w-full;
 }
 
+.table-wrapper table tr:hover td {
+  @apply bg-gray-200;
+}
+
+.table-wrapper table tr:hover td:first-child a {
+  @apply cursor-pointer text-blue-600;
+}
+
+
 .table-wrapper td {
   @apply bg-white;
 }
+
 
 .table-wrapper th, .table-wrapper td {
   @apply px-3 py-1;

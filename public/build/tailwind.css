@@ -689,6 +689,10 @@ h1,h2,h3,h4,h5 {
 }
 
 .btn-group button.active {
+  background-color: #fff;
+}
+
+.btn-group button:hover {
   background-color: #f7fafc;
 }
 
@@ -714,6 +718,15 @@ h1,h2,h3,h4,h5 {
 .table-wrapper table {
   table-layout: fixed;
   width: 100%;
+}
+
+.table-wrapper table tr:hover td {
+  background-color: #edf2f7;
+}
+
+.table-wrapper table tr:hover td:first-child a {
+  cursor: pointer;
+  color: #3182ce;
 }
 
 .table-wrapper td {
