@@ -102,6 +102,11 @@ h1,h2,h3,h4,h5 {
   @apply pb-4;
 }
 
+.overview-header a:hover {
+  @apply text-blue-700;
+}
+
+
 @tailwind utilities;
 
 
