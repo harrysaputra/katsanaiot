@@ -12,6 +12,7 @@
   <script src="js/jquery.js"></script>
   <script src="js/chart.js"></script>
   <script type="text/javascript" src="js/tooltipster.bundle.min.js"></script>
+  <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
   <title>Zone Detail Page</title>
 </head>
 <body>
@@ -176,7 +177,7 @@
                             <button>Empty</button>
                         </div>
 
-                        <div class="table-wrapper mx-4 mt-6 shadow-xl border border-gray-400 overflow-x-scroll md:overflow-x-auto rounded-lg">
+                        <div id="assets-table" class="table-wrapper mx-4 mt-6 shadow-xl border border-gray-400 overflow-x-scroll md:overflow-x-auto rounded-lg">
                         <table class="assets-table table-fixed">
                             <thead>
                                 <tr>
@@ -248,7 +249,7 @@
                             <h3 class="text-xl inline-flex">Top Received</h3>
                             <a href="#" class="inline-flex">View All</a>
                         </div>
-                        <div class="table-wrapper mt-6 shadow-xl border border-gray-400 overflow-x-scroll md:overflow-x-auto rounded-lg">
+                        <div class="table-wrapper mt-6 shadow-xl border border-gray-400 overflow-x-scroll overflow-visible overflow-x-auto rounded-lg">
                             <table class="assets-table table-fixed">
                                 <thead>
                                     <tr>
@@ -356,8 +357,17 @@
         $(".dailyreceived-wrapper-1").load("chart/dailyreceived1.html");
         $(".dailyreceived-wrapper-2").load("chart/dailyreceived2.html");
 
+        // scrollbar
+        $("#assets-table").niceScroll({
+            cursorwidth:12,
+            cursoropacitymin:0.4,
+            cursorcolor:'#6e8cb6',
+            cursorborder:'none',
+            cursorborderradius:4,
+            autohidemode:'leave'
+        });  // free your immagination
 
-        // 
+        // tooltips
         $(document).ready(function() {
             $('.tooltip').tooltipster({
                 animation: 'fade',
