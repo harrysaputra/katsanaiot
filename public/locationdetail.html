@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/tooltipster.bundle.min.css" />
+  <link rel="stylesheet" href="build/tailwind.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/chart.js"></script>
+  <script type="text/javascript" src="js/tooltipster.bundle.min.js"></script>
+  <title>Zone Detail Page</title>
+</head>
+<body>
+    
+        <div class="flex flex-wrap">
+            
+            <div class="w-full">
+                
+                <div id="navigation-wrapper" class="w-full bg-white shadow-xl"></div>
+                
+                <div id="header-section" class="px-4 py-8 text-center mx-auto bg-gray-800 text-white md:py-20">
+                  <label class="text-xl md:text-4xl leading-none font-light">Ladang Tanah Merah</label>
+                  <span class=" block md:text-md text-blue-200">SBU Northwest, Tradewinds Plantation Berhad</span>
+                  <span class="block mt-6 md:mt-8">Area General Manager</span>
+                  <span class="block text-xs">Ahmad Justin +62 100 1000</span>
+                </div>
+
+                <div id="overview-section" class="mt-8 md:mt-16 md:max-w-6xl md:mx-auto">
+
+                    <div class="overview-setting px-4 w-full flex flex-wrap items-center align-middle md:justify-start">
+                        <div class="relative inline-block w-40 mr-2">
+                            <select class="block appearance-none w-full bg-white border border-gray-700 text-gray-700 py-2 px-4 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                              <option>All Zone</option>
+                              <option>Kuala Lumpur</option>
+                              <option>Penang</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                            </div>
+                        </div>
+                        <div class="relative inline-block w-40 md:mr-2">
+                            <select class="block appearance-none w-full bg-white border border-gray-500 text-gray-700 py-2 px-4 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                              <option>This Week</option>
+                              <option>This Month</option>
+                              <option>Custom</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <svg class="fill-current h-4 w-4" viewBox="0 0 36.447 36.447" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m30.224 3.948h-1.098v-1.198c0-1.517-1.197-2.75-2.67-2.75-1.474 0-2.67 1.233-2.67 2.75v1.197h-2.74v-1.197c0-1.517-1.197-2.75-2.67-2.75s-2.67 1.233-2.67 2.75v1.197h-2.74v-1.197c0-1.517-1.197-2.75-2.67-2.75s-2.67 1.233-2.67 2.75v1.197h-1.402c-2.343 0-4.25 1.907-4.25 4.25v24c0 2.343 1.907 4.25 4.25 4.25h24c2.344 0 4.25-1.907 4.25-4.25v-24c0-2.342-1.907-4.249-4.25-4.249zm-4.938-1.198c0-0.689 0.525-1.25 1.17-1.25 0.646 0 1.17 0.561 1.17 1.25v4.896c0 0.689-0.524 1.25-1.17 1.25-0.645 0-1.17-0.561-1.17-1.25v-4.896zm-8.08 0c0-0.689 0.525-1.25 1.17-1.25s1.17 0.561 1.17 1.25v4.896c0 0.689-0.525 1.25-1.17 1.25s-1.17-0.561-1.17-1.25v-4.896zm-8.081 0c0-0.689 0.525-1.25 1.17-1.25s1.17 0.561 1.17 1.25v4.896c0 0.689-0.525 1.25-1.17 1.25s-1.17-0.561-1.17-1.25v-4.896zm22.849 29.448c0 0.965-0.785 1.75-1.75 1.75h-24c-0.965 0-1.75-0.785-1.75-1.75v-22h27.5v22z"/>
+                                    <rect x="6.724" y="14.626" width="4.595" height="4.089"/>
+                                    <rect x="12.857" y="14.626" width="4.596" height="4.089"/>
+                                    <rect x="18.995" y="14.626" width="4.595" height="4.089"/>
+                                    <rect x="25.128" y="14.626" width="4.596" height="4.089"/>
+                                    <rect x="6.724" y="20.084" width="4.595" height="4.086"/>
+                                    <rect x="12.857" y="20.084" width="4.596" height="4.086"/>
+                                    <rect x="18.995" y="20.084" width="4.595" height="4.086"/>
+                                    <rect x="25.128" y="20.084" width="4.596" height="4.086"/>
+                                    <rect x="6.724" y="25.54" width="4.595" height="4.086"/>
+                                    <rect x="12.857" y="25.54" width="4.596" height="4.086"/>
+                                    <rect x="18.995" y="25.54" width="4.595" height="4.086"/>
+                                    <rect x="25.128" y="25.54" width="4.596" height="4.086"/>
+                                </svg>
+                            
+                            </div>
+                        </div>    
+                        <span class="text-xs md:text-sm mt-4 md:mt-0  text-gray-500 md:ml-2">Displaying data 1st to 7th Sep 2019</span>
+                        <div class="flex ml-auto">
+                            <button class="bg-gray-100 text-gray-700 px-2 py-1 rounded mt-4 md:mt-0 shadow-md border-gray-500 border mr-2 ">
+                                Maps View
+                            </button>
+                            <button class="bg-green-500 text-white px-4 py-1 rounded mt-4 md:mt-0 shadow-md border-green-600 border">Export</button>
+                        </div>                
+                    </div>
+
+                    <!-- Main Overview Widget -->
+                    <div class="overview-widget mb-8">
+
+                        <div class="overview-header mx-4 mt-4 shadow-lg bg-gray-100 px-4 py-2 border-gray-400 rounded-t-lg hover:bg-blue-100 cursor-pointer">
+                            <h3 class="text-gray-700">Ladang Tanah Merah (5 Assets)</h3>
+                        </div>
+
+                        <div class="overview-body bg-white border-t-0 mb-4 rounded-b-lg shadow-lg p-4 md:p-8 md:pb-0 mx-4 flex flex-wrap">
+
+                            <div class="chart-widget max-w-xs mx-auto h-auto mb-4 md:mb-0 md:mr-8">
+                                <h3 class="text-sm mb-2 text-gray-500">Fuel Volume</h3>
+                                <div class="fuelchart-wrapper"></div>
+                            </div>
+                            
+                            <div class="chart-widget max-w-xs mx-auto h-auto mb-4 md:mb-0 md:mr-8">
+                                <h3 class="text-sm mb-2 text-gray-500">Daily Received VS Issue</h3>
+                                <div class="dailyreceived-wrapper"></div>
+                            </div>
+                            
+                            <div class="overview-summary flex-1">
+                                <h3 class="text-sm mb-2 text-gray-500">Summary</h3>
+                                <div class="flex-table text-gray-700 text-sm"
+                                >   
+                                    <!-- Content -->
+                                    <div class="row">
+                                        <div class="col w-10">
+                                            100
+                                        </div>
+                                        <div class="col flex-1">
+                                            Opening Balance
+                                        </div>
+                                        <div class="col text-right text-gray-700">
+                                            322,672 L
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col w-10">
+                                            1000
+                                        </div>
+                                        <div class="col flex-1">
+                                            Received
+                                        </div>
+                                        <div class="col text-right text-blue-700">
+                                            + 22,672 L
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col w-10">
+                                            10
+                                        </div>
+                                        <div class="col flex-1">
+                                            Issue
+                                        </div>
+                                        <div class="col text-right text-red-700">
+                                            - 191,672 L
+                                        </div>
+                                    </div>
+
+                                    <div class="row border-t border-gray-500 mt-2 pt-2">
+                                        <div class="col w-10">
+                                            
+                                        </div>
+                                        <div class="col font-bold flex-1">
+                                            Closing Balance
+                                        </div>
+                                        <div class="col text-right text-green-700 font-bold">
+                                            152,672 L
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row legend mt-6 mb-8 justify-between">
+                                        <h3 class="uppercase text-xs">Tank level</h3>
+                                        <ul class="flex flex-wrap">
+                                            <li class="mr-2 tooltip" title="Health"><span class="bullet"></span>22</li>
+                                            <li class="mr-2 tooltip" title="Moderate"><span class="bullet bg-gray-200"></span>22</li>
+                                            <li class="mr-2 tooltip" title="Low"><span class="bullet bg-yellow-400"></span>22</li>
+                                            <li class="tooltip" title="Empty"><span class="bullet bg-pink-600"></span>22</li>      
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>                                      
+
+                    <!-- Assets Widget -->
+                    <div class="overview-widget mb-8">
+
+                        <h3 class="mx-4 text-xl mt-6">Assets (5)</h3>
+
+                        <div class="shadow-md  btn-group mx-4 mt-6 flex inline-flex inline-block">
+                            <button class="active">Healthy</button>
+                            <button>Moderate</button>
+                            <button>Low</button>
+                            <button>Empty</button>
+                        </div>
+
+                        <div class="table-wrapper mx-4 mt-6 shadow-xl border border-gray-400 overflow-x-scroll md:overflow-x-auto rounded-lg">
+                        <table class="assets-table table-fixed">
+                            <thead>
+                                <tr>
+                                    <th class="w-32">Tank Name</th>
+                                    <th class="w-24">Liquid Type</th>
+                                    <th class="w-24">Capacity</th>
+                                    <th class="w-48">Opening Balance</th>
+                                    <th class="w-16">Received</th>
+                                    <th class="w-16">Issue</th>
+                                    <th class="w-32">Closing Balance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="tankdetail.html">Tank #01</a></td>
+                                    <td>Diesel</td>
+                                    <td>4000L</td>
+                                    <td>3500L(85%)</td>
+                                    <td>100</td>
+                                    <td>25</td>
+                                    <td>3000L(65%)</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="tankdetail.html">Tank #01</a></td>
+                                    <td>Diesel</td>
+                                    <td>4000L</td>
+                                    <td>3500L(85%)</td>
+                                    <td>100</td>
+                                    <td>25</td>
+                                    <td>3000L(65%)</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="tankdetail.html">Tank #01</a></td>
+                                    <td>Diesel</td>
+                                    <td>4000L</td>
+                                    <td>3500L(85%)</td>
+                                    <td>100</td>
+                                    <td>25</td>
+                                    <td>3000L(65%)</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="tankdetail.html">Tank #01</a></td>
+                                    <td>Diesel</td>
+                                    <td>4000L</td>
+                                    <td>3500L(85%)</td>
+                                    <td>100</td>
+                                    <td>25</td>
+                                    <td>3000L(65%)</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="tankdetail.html">Tank #01</a></td>
+                                    <td>Diesel</td>
+                                    <td>4000L</td>
+                                    <td>3500L(85%)</td>
+                                    <td>100</td>
+                                    <td>25</td>
+                                    <td>3000L(65%)</td>
+                                </tr>                                                                                                                                
+                            </tbody>
+                        </table>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="md:max-w-6xl mx-6 md:mx-auto my-8 md:mt-16 flex flex-no-wrap">
+                    <div class="w-1/2">
+                        <div class="widget-header mx-4 flex justify-between leading-none items-baseline align-baseline">
+                            <h3 class="text-xl inline-flex">Top Received</h3>
+                            <a href="#" class="inline-flex">View All</a>
+                        </div>
+                        <div class="table-wrapper mt-6 mx-4 shadow-xl border border-gray-400 overflow-x-scroll md:overflow-x-auto rounded-lg">
+                            <table class="assets-table table-fixed">
+                                <thead>
+                                    <tr>
+                                        <th class="w-16">Date</th>
+                                        <th class="w-16">Volume</th>
+                                        <th class="w-24">Tank Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>11 Sep 19</td>
+                                        <td>4000L</td>
+                                        <td><a href="tankdetail.html">Tank #01</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11 Sep 19</td>
+                                        <td>4000L</td>
+                                        <td><a href="tankdetail.html">Tank #01</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11 Sep 19</td>
+                                        <td>4000L</td>
+                                        <td><a href="tankdetail.html">Tank #01</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11 Sep 19</td>
+                                        <td>4000L</td>
+                                        <td><a href="tankdetail.html">Tank #01</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11 Sep 19</td>
+                                        <td>4000L</td>
+                                        <td><a href="tankdetail.html">Tank #01</a></td>
+                                    </tr>                                                                                                                                                                                                                 
+                                </tbody>
+                            </table>
+                        </div>                        
+                    </div>
+                    <div class="w-1/2">
+                        <div class="widget-header mx-4 flex justify-between leading-none items-baseline align-baseline">
+                            <h3 class="text-xl inline-flex">Top Issued</h3>
+                            <a href="#" class="inline-flex">View All</a>
+                        </div>
+                        <div class="table-wrapper mt-6 mx-4 shadow-xl border border-gray-400 overflow-x-scroll md:overflow-x-auto rounded-lg">
+                            <table class="assets-table table-fixed">
+                                <thead>
+                                    <tr>
+                                        <th class="w-16">Date</th>
+                                        <th class="w-16">Volume</th>
+                                        <th class="w-24">Tank Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>11 Sep 19</td>
+                                        <td>4000L</td>
+                                        <td><a href="tankdetail.html">Tank #01</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11 Sep 19</td>
+                                        <td>4000L</td>
+                                        <td><a href="tankdetail.html">Tank #01</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11 Sep 19</td>
+                                        <td>4000L</td>
+                                        <td><a href="tankdetail.html">Tank #01</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11 Sep 19</td>
+                                        <td>4000L</td>
+                                        <td><a href="tankdetail.html">Tank #01</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11 Sep 19</td>
+                                        <td>4000L</td>
+                                        <td><a href="tankdetail.html">Tank #01</a></td>
+                                    </tr>                                                                                                                                                                                                                 
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>                
+
+                
+            </div>
+            
+
+        
+        
+        
+        
+        </div>
+
+    <div id="menu"></div>
+    <script>
+        // Load Template
+        $("#navigation-wrapper").load("components/navigation.html");
+        $("#menu").load("menu.html");
+
+        $(".fuelchart-wrapper").load("chart/fuel.html");
+        $(".fuelchart-wrapper-1").load("chart/fuel1.html");
+        $(".fuelchart-wrapper-2").load("chart/fuel2.html");
+        $(".dailyreceived-wrapper").load("chart/dailyreceived.html");
+        $(".dailyreceived-wrapper-1").load("chart/dailyreceived1.html");
+        $(".dailyreceived-wrapper-2").load("chart/dailyreceived2.html");
+
+
+        // 
+        $(document).ready(function() {
+            $('.tooltip').tooltipster({
+                animation: 'fade',
+                delay: 200,
+                trigger: 'click'
+            });
+        });
+    </script>
+
+</body>
+</html>
