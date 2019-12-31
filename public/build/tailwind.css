@@ -741,9 +741,12 @@ h1,h2,h3,h4,h5 {
 }
 
 .table-wrapper th {
+  font-weight: 400;
   background-color: #ebf8ff;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.875rem;
 }
 
 .table-wrapper tbody tr:first-child {

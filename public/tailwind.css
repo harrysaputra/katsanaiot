@@ -87,7 +87,7 @@ h1,h2,h3,h4,h5 {
 }
 
 .table-wrapper th {
-  @apply bg-blue-100 py-2;
+  @apply font-normal bg-blue-100 py-2 uppercase text-sm;
 }
 
 .table-wrapper tbody tr:first-child {
