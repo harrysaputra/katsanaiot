@@ -747,6 +747,7 @@ h1,h2,h3,h4,h5 {
   padding-bottom: 0.5rem;
   text-transform: uppercase;
   font-size: 0.875rem;
+  cursor: pointer;
 }
 
 .table-wrapper tbody tr:first-child {

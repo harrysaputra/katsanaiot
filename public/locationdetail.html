@@ -170,75 +170,115 @@
 
                         <h3 class="mx-4 text-xl mt-6">Assets (5)</h3>
 
-                        <div class="shadow-md  btn-group mx-4 mt-6 flex inline-flex inline-block">
-                            <button class="active">Healthy</button>
-                            <button>Moderate</button>
-                            <button>Low</button>
-                            <button>Empty</button>
+                        <div class="setting-wrapper mt-6 mx-4 flex flex-wrap md:flex-no-wrap md:justify-between">
+                            <div class="relative inline-flex w-full mb-6 md:w-32 md:mb-0">
+                                <select class="block appearance-none w-full bg-white border border-gray-500 text-gray-700 py-2 px-4 pr-2 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                                <option>Liquid Type</option>
+                                <option>Diesel</option>
+                                <option>Petrol</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                </div>
+                            </div>
+                            <div class="shadow-md  btn-group flex inline-flex inline-block">
+                                <button class="active">Healthy</button>
+                                <button>Moderate</button>
+                                <button>Low</button>
+                                <button>Empty</button>
+                            </div>
                         </div>
 
                         <div id="assets-table" class="table-wrapper mx-4 mt-6 shadow-xl border border-gray-400 overflow-x-scroll md:overflow-x-auto rounded-lg">
-                        <table class="assets-table table-fixed">
-                            <thead>
-                                <tr>
-                                    <th class="w-32">Tank Name</th>
-                                    <th class="w-24">Liquid Type</th>
-                                    <th class="w-24">Capacity</th>
-                                    <th class="w-48">Opening Balance</th>
-                                    <th class="w-16">Received</th>
-                                    <th class="w-16">Issued</th>
-                                    <th class="w-32">Closing Balance</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><a href="tankdetail.html">Tank #01</a></td>
-                                    <td>Diesel</td>
-                                    <td>4000L</td>
-                                    <td>3500L - 85%</td>
-                                    <td>100</td>
-                                    <td>25</td>
-                                    <td>3000L - 65%</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="tankdetail.html">Tank #01</a></td>
-                                    <td>Diesel</td>
-                                    <td>4000L</td>
-                                    <td>3500L - 85%</td>
-                                    <td>100</td>
-                                    <td>25</td>
-                                    <td>3000L - 65%</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="tankdetail.html">Tank #01</a></td>
-                                    <td>Diesel</td>
-                                    <td>4000L</td>
-                                    <td>3500L - 85%</td>
-                                    <td>100</td>
-                                    <td>25</td>
-                                    <td>3000L - 65%</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="tankdetail.html">Tank #01</a></td>
-                                    <td>Diesel</td>
-                                    <td>4000L</td>
-                                    <td>3500L - 85%</td>
-                                    <td>100</td>
-                                    <td>25</td>
-                                    <td>3000L - 65%</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="tankdetail.html">Tank #01</a></td>
-                                    <td>Diesel</td>
-                                    <td>4000L</td>
-                                    <td>3500L - 85%</td>
-                                    <td>100</td>
-                                    <td>25</td>
-                                    <td>3000L - 65%</td>
-                                </tr>                                                                                                                                
-                            </tbody>
-                        </table>
-                        </div>
+                            <table class="assets-table table-fixed">
+                                <thead>
+                                    <tr>
+                                        <th class="w-32">
+                                            Tank Name
+                                            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M10 1L5 8h10l-5-7zm0 18l5-7H5l5 7z" fill="#626262"/></svg>
+                                        </th>
+                                        <th class="w-32">Liquid Type
+                                            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M10 1L5 8h10l-5-7zm0 18l5-7H5l5 7z" fill="#626262"/></svg>                                        
+                                        </th>
+                                        <th class="w-32">Capacity
+                                            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M10 1L5 8h10l-5-7zm0 18l5-7H5l5 7z" fill="#626262"/></svg>                                        
+                                        </th>
+                                        <th class="w-48">Opening Balance
+                                            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M10 1L5 8h10l-5-7zm0 18l5-7H5l5 7z" fill="#626262"/></svg>                                        
+                                        </th>
+                                        <th class="w-32">Received
+                                            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M10 1L5 8h10l-5-7zm0 18l5-7H5l5 7z" fill="#626262"/></svg>
+                                        </th>
+                                        <th class="w-32">Issued
+                                            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M10 1L5 8h10l-5-7zm0 18l5-7H5l5 7z" fill="#626262"/></svg>                                        
+                                        </th>
+                                        <th class="w-48">Closing Balance
+                                            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M10 1L5 8h10l-5-7zm0 18l5-7H5l5 7z" fill="#626262"/></svg>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><a href="tankdetail.html">Tank #01</a></td>
+                                        <td>Diesel</td>
+                                        <td>4000L</td>
+                                        <td>3500L - 85%</td>
+                                        <td>100</td>
+                                        <td>25</td>
+                                        <td>
+                                            <svg class="inline-block mb-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M10 2.5L16.5 9H13v8H7V9H3.5L10 2.5z" fill="green"/></svg>
+                                            4000L - 100%
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="tankdetail.html">Tank #02</a></td>
+                                        <td>Diesel</td>
+                                        <td>4000L</td>
+                                        <td>3500L - 85%</td>
+                                        <td>100</td>
+                                        <td>25</td>
+                                        <td>
+                                            <svg class="inline-block mb-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M10 17.5L3.5 11H7V3h6v8h3.5L10 17.5z" fill="red"/></svg>                                        
+                                            2000L - 50%
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="tankdetail.html">Tank #03</a></td>
+                                        <td>Diesel</td>
+                                        <td>4000L</td>
+                                        <td>3500L - 85%</td>
+                                        <td>100</td>
+                                        <td>25</td>
+                                        <td>
+                                            <svg class="inline-block mb-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M10 17.5L3.5 11H7V3h6v8h3.5L10 17.5z" fill="red"/></svg>     
+                                            3000L - 65%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="tankdetail.html">Tank #04</a></td>
+                                        <td>Diesel</td>
+                                        <td>4000L</td>
+                                        <td>3500L - 85%</td>
+                                        <td>100</td>
+                                        <td>25</td>
+                                        <td>
+                                            <svg class="inline-block mb-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M10 17.5L3.5 11H7V3h6v8h3.5L10 17.5z" fill="red"/></svg>     
+                                            3000L - 65%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="tankdetail.html">Tank #05</a></td>
+                                        <td>Diesel</td>
+                                        <td>4000L</td>
+                                        <td>3500L - 85%</td>
+                                        <td>100</td>
+                                        <td>25</td>
+                                        <td>
+                                            <svg class="inline-block mb-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M10 17.5L3.5 11H7V3h6v8h3.5L10 17.5z" fill="red"/></svg>     
+                                            3000L - 65%</td>
+                                    </tr>                 
+                                </tbody>
+                            </table>
+                            </div>                        
+
 
                     </div>
                 </div>
