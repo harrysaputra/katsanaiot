@@ -1,7 +1,7 @@
 @tailwind base;
 
 body {
-    @apply font-body antialiased bg-gray-200 text-gray-700;
+    @apply font-body antialiased bg-gray-300 text-gray-700;
 }
 
 h1,h2,h3,h4,h5 {
