@@ -410,9 +410,16 @@
         // tooltips
         $(document).ready(function() {
             $('.tooltip').tooltipster({
-                animation: 'fade',
-                delay: 200,
-                trigger: 'hover'
+                trigger: 'custom',
+                triggerOpen: {
+                    mouseenter: true,
+                    touchstart: true
+                },
+                triggerClose: {
+                    click: true,
+                    scroll: true,
+                    tap: true
+                }
             });
         });
     </script>

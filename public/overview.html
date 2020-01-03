@@ -357,12 +357,19 @@
         $(".dailyreceived-wrapper-1").load("chart/dailyreceived1.html");
         $(".dailyreceived-wrapper-2").load("chart/dailyreceived2.html");
 
-        // Tooltips
+        // tooltips
         $(document).ready(function() {
             $('.tooltip').tooltipster({
-                animation: 'fade',
-                delay: 100,
-                trigger: 'hover'
+                trigger: 'custom',
+                triggerOpen: {
+                    mouseenter: true,
+                    touchstart: true
+                },
+                triggerClose: {
+                    click: true,
+                    scroll: true,
+                    tap: true
+                }
             });
         });
 
