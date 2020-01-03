@@ -8,8 +8,10 @@
   <link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="build/tailwind.css">
+  <link rel="stylesheet" type="text/css" href="css/tooltipster.bundle.min.css" />
   <script src="js/jquery.js"></script>
   <script src="js/chart.js"></script>
+  <script type="text/javascript" src="js/tooltipster.bundle.min.js"></script>
   <title>Welcome to Tailwind!</title>
 </head>
 <body>
@@ -72,7 +74,7 @@
                     <!-- Overview Widget -->
 
                     <!-- Widget 1 -->
-                    <div class="overview-widget mx-4 mt-8 mb-12">
+                    <div class="overview-widget mx-4 mt-8 mb-8">
                         <div class="overview-header shadow-lg bg-gray-100 px-4 py-2 border-gray-400 rounded-t-lg hover:bg-blue-100 cursor-pointer">
                             <h3 class="text-gray-700">
                                 <a href="zonedetail.html">SBU Northwest (83 Assets)</a>
@@ -147,10 +149,10 @@
                                     <div class="row legend mt-6 mb-8 justify-between">
                                         <h3 class="uppercase text-xs">Tank level</h3>
                                         <ul class="flex flex-wrap">
-                                            <li class="mr-2"><span class="h-3 w-3 align-baseline bg-gray-800 inline-block rounded-full mr-2 border border-3 border-gray-700"></span>22</li>
-                                            <li class="mr-2"><span class="h-3 w-3 align-baseline bg-gray-200 inline-block rounded-full mr-2 border border-3 border-gray-700"></span>22</li>
-                                            <li class="mr-2"><span class="h-3 w-3 align-baseline bg-yellow-400 inline-block rounded-full mr-2 border border-3 border-gray-700"></span>22</li>
-                                            <li><span class="h-3 w-3 align-baseline bg-pink-600 inline-block rounded-full mr-2 border border-3 border-gray-700"></span>22</li>      
+                                            <li class="mr-2 tooltip" title="Health"><span class="bullet"></span>22</li>
+                                            <li class="mr-2 tooltip" title="Moderate"><span class="bullet bg-gray-200"></span>22</li>
+                                            <li class="mr-2 tooltip" title="Low"><span class="bullet bg-yellow-400"></span>22</li>
+                                            <li class="tooltip" title="Empty"><span class="bullet bg-pink-600"></span>22</li>      
                                         </ul>
                                     </div>
 
@@ -235,10 +237,10 @@
                                     <div class="row legend mt-6 mb-8 justify-between">
                                         <h3 class="uppercase text-xs">Tank level</h3>
                                         <ul class="flex flex-wrap">
-                                            <li class="mr-2"><span class="h-3 w-3 align-baseline bg-gray-800 inline-block rounded-full mr-2 border border-3 border-gray-700"></span>22</li>
-                                            <li class="mr-2"><span class="h-3 w-3 align-baseline bg-gray-200 inline-block rounded-full mr-2 border border-3 border-gray-700"></span>22</li>
-                                            <li class="mr-2"><span class="h-3 w-3 align-baseline bg-yellow-400 inline-block rounded-full mr-2 border border-3 border-gray-700"></span>22</li>
-                                            <li><span class="h-3 w-3 align-baseline bg-pink-600 inline-block rounded-full mr-2 border border-3 border-gray-700"></span>22</li>      
+                                            <li class="mr-2 tooltip" title="Health"><span class="bullet"></span>22</li>
+                                            <li class="mr-2 tooltip" title="Moderate"><span class="bullet bg-gray-200"></span>22</li>
+                                            <li class="mr-2 tooltip" title="Low"><span class="bullet bg-yellow-400"></span>22</li>
+                                            <li class="tooltip" title="Empty"><span class="bullet bg-pink-600"></span>22</li>      
                                         </ul>
                                     </div>
 
@@ -324,10 +326,10 @@
                                     <div class="row legend mt-6 mb-8 justify-between">
                                         <h3 class="uppercase text-xs">Tank level</h3>
                                         <ul class="flex flex-wrap">
-                                            <li class="mr-2"><span class="h-3 w-3 align-baseline bg-gray-800 inline-block rounded-full mr-2 border border-3 border-gray-700"></span>22</li>
-                                            <li class="mr-2"><span class="h-3 w-3 align-baseline bg-gray-200 inline-block rounded-full mr-2 border border-3 border-gray-700"></span>22</li>
-                                            <li class="mr-2"><span class="h-3 w-3 align-baseline bg-yellow-400 inline-block rounded-full mr-2 border border-3 border-gray-700"></span>22</li>
-                                            <li><span class="h-3 w-3 align-baseline bg-pink-600 inline-block rounded-full mr-2 border border-3 border-gray-700"></span>22</li>      
+                                            <li class="mr-2 tooltip" title="Health"><span class="bullet"></span>22</li>
+                                            <li class="mr-2 tooltip" title="Moderate"><span class="bullet bg-gray-200"></span>22</li>
+                                            <li class="mr-2 tooltip" title="Low"><span class="bullet bg-yellow-400"></span>22</li>
+                                            <li class="tooltip" title="Empty"><span class="bullet bg-pink-600"></span>22</li>      
                                         </ul>
                                     </div>
 
@@ -355,6 +357,14 @@
         $(".dailyreceived-wrapper-1").load("chart/dailyreceived1.html");
         $(".dailyreceived-wrapper-2").load("chart/dailyreceived2.html");
 
+        // Tooltips
+        $(document).ready(function() {
+            $('.tooltip').tooltipster({
+                animation: 'fade',
+                delay: 100,
+                trigger: 'hover'
+            });
+        });
 
     </script>
 </body>
