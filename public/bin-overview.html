@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="build/tailwind.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/gauge.min.js"></script>
+  <title>Skid Tank Monitoring System</title>
+</head>
+<body>
+    
+        <div class="flex flex-wrap">
+            
+            <div class="w-full">
+                
+                <div id="navigation-wrapper" class="w-full bg-white shadow-xl"></div>
+                
+                <div id="header-section" class="px-4 py-8 text-center mx-auto bg-gray-800 text-white md:py-10">
+                  <h1 class="text-2xl md:text-4xl leading-none">Bintulu Plantations Berhad</h1>
+                  <span class=" block mt-2 md:text-md leading-tight text-blue-200">Skid Tank Monitoring Platform</span>
+                  <span class="block mt-4 md:mt-4">Welcome, Idham Kamal</span>
+                </div>
+
+                <div id="dashboard-wrapper" class="md:mt-8 p-4 md:p-0 md:max-w-6xl md:mx-auto md:flex">
+
+                    <!-- Map Widget -->
+                    <div id="map-widget" class="w-full md:w-1/3 flex-col md:mr-8 m-0">
+
+                        <div class="widget-header shadow-lg bg-gray-100 px-3 py-1 border-gray-400 rounded-t-lg hover:bg-blue-100 cursor-pointer">
+                            <h3 class="text-gray-700">
+                                <a href="zonedetail.html">Mapping View</a>
+                            </h3>
+                        </div>
+
+                        <div class="widget-body bg-white border-t-0 mb-4 rounded-b-lg shadow-lg">
+                            <div style="--aspect-ratio: 16/9;">
+                                <div class="mapouter"><div class="gmap_canvas"><iframe width="1600" height="900" id="gmap_canvas" src="https://maps.google.com/maps?q=bintulu&t=&z=7&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com"></a></div><style>.mapouter{position:relative;text-align:right;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:100%;}</style></div>
+                            </div>                            
+                        </div>
+
+                    </div>
+
+                    <div class="w-full md:w-2/3 md:flex-row flex-col">
+
+                        <div class="md:flex flex-row mb-6">
+
+                            <div class="md:w-1/3  w-full md:flex-col bg-white px-4 py-2 mb-2 md:mb-0 md:mr-4 mr-0 rounded-lg">
+                                <h1 class="text-2xl">100.000L</h1>
+                                <span class="text-sm">Total Capacity</span>
+                            </div>
+
+                            <div class="md:w-1/3 w-full md:flex-col md:mr-0 md:mr-4 bg-red-600 mb-2 md:mb-0 px-4 py-2 rounded-lg text-white">
+                                <h1 class="text-2xl">Low - 30.000L</h1>
+                                <span class="text-sm">Capacity Status</span>
+                            </div>
+
+                            <div class="md:w-1/3  w-full md:flex-col bg-green-600 mb-2 md:mb-0 px-4 py-2 rounded-lg text-white">
+                                <h1 class="text-2xl">Balance</h1>
+                                <span class="text-sm">Balancing Status</span>
+                            </div>                         
+
+                        </div>
+                        
+                        <div class="md:flex flex-row">
+                            <!-- Tank 01 Widget -->
+                            <div class="md:w-1/2 w-full flex-col md:mr-8">
+                                <div class="widget-header shadow-lg bg-gray-100 px-3 py-1 border-gray-400 rounded-t-lg hover:bg-blue-100 cursor-pointer flex justify-between align-middle">
+                                    <h3 class="text-gray-700">
+                                        <a href="zonedetail.html">Tank 01</a>
+                                    </h3>
+                                    <div class="indicator inline">
+                                        <!-- icon power -->
+                                        <span class="text-xs">POWER 90%</span>
+                                        <span class="w-3 h-3 bg-green-500 inline-flex rounded-full mr-2"></span>
+                                        <span class="text-xs">GSM</span>
+                                        <span class="w-3 h-3 bg-green-500 inline-flex rounded-full"></span>
+                                    </div>
+                                </div>
+                                <div class="widget-body bg-white border-t-0 mb-4 rounded-b-lg shadow-lg p-4 flex">
+
+                                    <div class="flex-col w-2/3">
+                                        <canvas data-type="radial-gauge"
+                                            data-units="Capacity (Litre)"
+                                            data-value="15000"
+                                            data-value-box="true"
+                                            data-min-value="0"
+                                            data-max-value="50000"
+                                            data-major-ticks="0,10000,20000,30000,40000,50000"
+                                            data-minor-ticks="5"
+                                            data-stroke-ticks="true"
+                                            
+                                            data-highlights='[
+                                                {"from": 0, "to": 15000, "color": "rgba(255, 71, 71, 1)"}
+                                            ]'
+                                            data-color-plate="#fff"
+                                            data-border-shadow-width="0"
+                                            data-borders="false"
+                                            data-needle-type="arrow"
+                                            data-needle-width="2"
+                                            data-needle-circle-size="2"
+                                            data-needle-circle-outer="false"
+                                            data-needle-circle-inner="false"
+                                            data-animation-duration="1500"
+                                            data-animation-rule="linear"
+                                        ></canvas>
+                                    </div>
+
+                                    <div class="flex-col w-1/3">
+                                        <canvas data-type="linear-gauge"
+                                        data-width="80"
+                                        data-height="140"
+                                        data-units="Level (Meter)"
+                                        data-value="0.75"
+                                        data-min-value="0"
+                                        data-max-value="2"
+                                        data-major-ticks="0,0.5,1,1.5,2"
+                                        data-minor-ticks="2"
+                                        data-stroke-ticks="false"
+                                        data-highlights='[ {"from": 0, "to": 0.75, "color": "rgba(237, 18, 18, 1)"} ]'
+                                        data-color-plate="#ffffff"
+                                        data-border-shadow-width="0"
+                                        data-borders="false"
+                                        data-needle-type="arrow"
+                                        data-needle-width="3"
+                                        data-animation-duration="1500"
+                                        data-animation-rule="linear"
+                                        data-tick-side="left"
+                                        data-number-side="left"
+                                        data-needle-side="left"
+                                        data-bar-stroke-width="0"
+                                        data-bar-begin-circle="false"
+                                        ></canvas>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tank 02 Widget -->
+                            <div class="md:w-1/2 w-full flex-col">
+                                <div class="widget-header shadow-lg bg-gray-100 px-3 py-1 border-gray-400 rounded-t-lg hover:bg-blue-100 cursor-pointer flex justify-between align-middle">
+                                    <h3 class="text-gray-700">
+                                        <a href="zonedetail.html">Tank 02</a>
+                                    </h3>
+                                    <div class="indicator inline">
+                                        <!-- icon power -->
+                                        <span class="text-xs">POWER 60%</span>
+                                        <span class="w-3 h-3 bg-green-500 inline-flex rounded-full mr-2"></span>
+                                        <span class="text-xs">GSM</span>
+                                        <span class="w-3 h-3 bg-red-500 inline-flex rounded-full"></span>
+                                    </div>
+                                </div>
+                                <div class="widget-body bg-white border-t-0 mb-4 rounded-b-lg shadow-lg p-4 flex">
+
+                                    <div class="flex-col w-2/3">
+                                        <canvas data-type="radial-gauge"
+                                            data-units="Capacity (Litre)"
+                                            data-value="15000"
+                                            data-value-box="true"
+                                            data-min-value="0"
+                                            data-max-value="50000"
+                                            data-major-ticks="0,10000,20000,30000,40000,50000"
+                                            data-minor-ticks="5"
+                                            data-stroke-ticks="true"
+                                            
+                                            data-highlights='[
+                                                {"from": 0, "to": 15000, "color": "rgba(255, 71, 71, 1)"}
+                                            ]'
+                                            data-color-plate="#fff"
+                                            data-border-shadow-width="0"
+                                            data-borders="false"
+                                            data-needle-type="arrow"
+                                            data-needle-width="2"
+                                            data-needle-circle-size="2"
+                                            data-needle-circle-outer="false"
+                                            data-needle-circle-inner="false"
+                                            data-animation-duration="1500"
+                                            data-animation-rule="linear"
+                                        ></canvas>
+                                    </div>
+
+                                    <div class="flex-col w-1/3">
+                                        <canvas data-type="linear-gauge"
+                                        data-width="80"
+                                        data-height="140"
+                                        data-units="Level (Meter)"
+                                        data-value="0.75"
+                                        data-min-value="0"
+                                        data-max-value="2"
+                                        data-major-ticks="0,0.5,1,1.5,2"
+                                        data-minor-ticks="2"
+                                        data-stroke-ticks="false"
+                                        data-highlights='[ {"from": 0, "to": 0.75, "color": "rgba(237, 18, 18, 1)"} ]'
+                                        data-color-plate="#ffffff"
+                                        data-border-shadow-width="0"
+                                        data-borders="false"
+                                        data-needle-type="arrow"
+                                        data-needle-width="3"
+                                        data-animation-duration="1500"
+                                        data-animation-rule="linear"
+                                        data-tick-side="left"
+                                        data-number-side="left"
+                                        data-needle-side="left"
+                                        data-bar-stroke-width="0"
+                                        data-bar-begin-circle="false"
+                                        ></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+
+                    </div>
+                 
+                    
+                </div>
+
+            </div>
+            
+        </div>
+
+        <footer class="p-4 px-2 text-center w-full">
+            <span class="text-xs">Copyright 2013 - 2020 KATSANA Orbital. All Rights Reserved. Version 0.1</span>
+        </footer>
+
+    <div id="menu"></div>
+    <script>
+        $("#navigation-wrapper").load("components/bin-navigation.html");
+        $("#menu").load("menu.html");
+
+    </script>
+</body>
+</html>
