@@ -34,35 +34,39 @@
 
                 <div id="tankdetail-wrapper" class="mt-8 md:max-w-6xl md:mx-auto flex ">
 
-                    <!-- Tank Status Widget -->
+                    <!-- Tank Report Widget -->
                     <div class="unit-information mb-8 md:w-1/3 flex-col p-4 pt-0">
+                         
+                        <!-- Live Status -->
+                        <div class="widget-header flex justify-between leading-none items-baseline align-baseline mb-4">
+                            <h3 class="text-base inline-flex">Current Status</h3>
+                        </div>
 
                         <div class="flex mb-4">
-                            <div class="md:w-1/2 w-full md:flex-col md:mr-0 md:mr-4 bg-red-600 mb-2 md:mb-0 px-4 py-2 rounded-lg text-white ">
-                                <h1 class="text-2xl leading-tight">Loss <span class="text-sm text-red-300">10K Litre</span></h1>
-                                <span class="text-sm">Liquid Status</span>
+                            <div class="md:w-1/2 w-full md:flex-col md:mr-4  bg-red-600 mb-2 md:mb-0 px-4 py-2 rounded text-white ">
+                                <h1 class="text-lg leading-tight">Loss <span class="text-sm text-red-300">10K Litre</span></h1>
+                                <span class="text-xs">Liquid Status</span>
                             </div> 
                         
-                            <div class="md:w-1/2 w-full md:flex-col md:mr-0 bg-green-600 mb-2 md:mb-0 px-4 py-2 rounded-lg text-white">
-                                <h1 class="text-2xl leading-tight">Maximum</h1>
-                                <span class="text-sm">Threshold Status</span>
+                            <div class="md:w-1/2 w-full md:flex-col bg-green-600 mb-2 md:mb-0 px-4 py-2 rounded text-white">
+                                <h1 class="text-lg leading-tight">Maximum</h1>
+                                <span class="text-xs">Threshold Status</span>
                             </div>
-                        </div>                         
-
+                                                     
+                        </div>
+                        
                         <div class="flex mb-6">
-                            <div class="md:w-1/2 w-full md:flex-col md:mr-0 md:mr-4 bg-red-600 mb-2 md:mb-0 px-4 py-2 rounded-lg text-white ">
-                                <h1 class="text-2xl leading-tight">Low <span class="text-sm text-red-300">20%</span></h1>
-                                <span class="text-sm">Power Status</span>
+                            <div class="md:w-1/2 w-full md:flex-col md:mr-4 bg-red-600 mb-2 md:mb-0 px-4 py-2 rounded text-white ">
+                                <h1 class="text-lg leading-tight">Low <span class="text-sm text-red-300">20%</span></h1>
+                                <span class="text-xs">Power Status</span>
                             </div> 
                         
-                            <div class="md:w-1/2 w-full md:flex-col md:mr-0 bg-green-600 mb-2 md:mb-0 px-4 py-2 rounded-lg text-white">
-                                <h1 class="text-2xl leading-tight">High <span class="text-sm text-green-300">4G</span></h1>
-                                <span class="text-sm">Connectivity Status</span>
-                            </div>
-                        </div>                            
-
-
-                        <!-- Live Status -->
+                            <div class="md:w-1/2 w-full md:flex-col md:mr-0 bg-green-600 mb-2 md:mb-0 px-4 py-2 rounded text-white">
+                                <h1 class="text-lg leading-tight">Connected <span class="text-sm text-green-300">2w 5d</span></h1>
+                                <span class="text-xs">Connectivity Status</span>
+                            </div>                               
+                        </div>                        
+                        
                         <div class="widget-header shadow-lg bg-gray-100 px-3 py-1 border-gray-400 rounded-t-lg hover:bg-blue-100 cursor-pointer flex justify-between align-middle ">
                             <h3 class="text-gray-700">Tank Status</h3>
                             <div class="indicator inline">
@@ -164,17 +168,86 @@
                             
                         </div>
 
-                       
+
+
+                        <!-- Automated Alert -->
+
+                        <div class="widget-header flex justify-between leading-none items-baseline align-baseline mb-4">
+                            <h3 class="text-base inline-flex">Automated Alert by Events</h3>
+                        </div>
+
+                        <div id="assets-table" class="table-wrapper mt-2 shadow-xl border border-gray-400 overflow-x-scroll md:overflow-x-auto rounded-lg">
+                            <table class="assets-table table-fixed">
+                                <thead class="text-sm">
+                                    <tr>
+                                        <th class="w-24">
+                                            Date
+                                            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M10 1L5 8h10l-5-7zm0 18l5-7H5l5 7z" fill="#626262"/></svg>
+                                        </th>
+                                        <th class="w-24">Time
+                                            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M10 1L5 8h10l-5-7zm0 18l5-7H5l5 7z" fill="#626262"/></svg>                                        
+                                        </th>
+                                        <th class="w-56">Events
+                                            <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M10 1L5 8h10l-5-7zm0 18l5-7H5l5 7z" fill="#626262"/></svg>                                        
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-sm">02/02/2020</td>
+                                        <td class="text-sm">08:00 AM</td>
+                                        <td class="text-sm">Liquid loss 1000 Litre</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm">02/02/2020</td>
+                                        <td class="text-sm">08:00 AM</td>
+                                        <td class="text-sm">Liquid loss 1000 Litre</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm">02/02/2020</td>
+                                        <td class="text-sm">08:00 AM</td>
+                                        <td class="text-sm">Liquid loss 1000 Litre</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm">02/02/2020</td>
+                                        <td class="text-sm">08:00 AM</td>
+                                        <td class="text-sm">Liquid loss 1000 Litre</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm">02/02/2020</td>
+                                        <td class="text-sm">08:00 AM</td>
+                                        <td class="text-sm">Liquid loss 1000 Litre</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm">02/02/2020</td>
+                                        <td class="text-sm">08:00 AM</td>
+                                        <td class="text-sm">Liquid loss 1000 Litre</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm">02/02/2020</td>
+                                        <td class="text-sm">08:00 AM</td>
+                                        <td class="text-sm">Liquid loss 1000 Litre</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-sm">02/02/2020</td>
+                                        <td class="text-sm">08:00 AM</td>
+                                        <td class="text-sm">Liquid loss 1000 Litre</td>
+                                    </tr>      
+                                </tbody>
+                            </table>
+                        </div>                        
+                        
 
                     </div>                                      
 
                     <!-- Inflow/Outflow Widget -->
-                    <div class="unit-information mb-8 md:w-2/3">
-                        <div class="overview-header mx-4 shadow-lg bg-gray-100 px-4 py-2 border-gray-400 rounded-t-lg hover:bg-blue-100 cursor-pointer">
+                    <div class="unit-information mb-8 md:w-2/3 p-4 pt-0">
+
+                        <div class="overview-header shadow-lg bg-gray-100 px-4 py-2 border-gray-400 rounded-t-lg hover:bg-blue-100 cursor-pointer">
                             <h3 class="text-gray-700">Inflow/Outflow Report</h3>
                         </div>
 
-                        <div class="overview-body bg-white border-t-0 mb-4 rounded-b-lg shadow-lg p-6 pb-0 md:p-6 mx-4 flex flex-wrap">
+                        <div class="overview-body bg-white border-t-0 mb-4 rounded-b-lg shadow-lg  pb-0 p-6  flex flex-wrap">
 
                             <div class="date-setting text-sm w-full flex flex-wrap items-center align-middle mb-8">
                                 <div class="relative inline-flex w-48 mr-2">
@@ -208,7 +281,73 @@
                                 </div>                
                             </div>                            
 
-                            <div class="inoutflow-wrapper w-full flex mb-6 -ml-2"></div>
+                            <div class="inoutflow-wrapper w-full flex mb-8 -ml-2"></div>
+
+                            <div class="widget-header flex justify-between leading-none items-baseline align-baseline mb-4">
+                                <h3 class="text-base inline-flex">Consumption Report</h3>
+                            </div>
+    
+                            <div id="assets-table" class="table-wrapper mb-6 overflow-x-scroll md:overflow-x-auto">
+                                <table class="assets-table table-fixed">
+                                    <thead class="text-sm">
+                                        <tr>
+                                            <th class="w-24">
+                                                Date
+                                                <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M10 1L5 8h10l-5-7zm0 18l5-7H5l5 7z" fill="#626262"/></svg>
+                                            </th>
+                                            <th class="w-24">Time
+                                                <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M10 1L5 8h10l-5-7zm0 18l5-7H5l5 7z" fill="#626262"/></svg>                                        
+                                            </th>
+                                            <th class="w-auto">Notes
+                                                <svg class="inline-block" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M10 1L5 8h10l-5-7zm0 18l5-7H5l5 7z" fill="#626262"/></svg>                                        
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-sm">02/02/2020</td>
+                                            <td class="text-sm">08:00 AM</td>
+                                            <td class="text-sm">Liquid loss 1000 Litre</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-sm">02/02/2020</td>
+                                            <td class="text-sm">08:00 AM</td>
+                                            <td class="text-sm">Liquid loss 1000 Litre</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-sm">02/02/2020</td>
+                                            <td class="text-sm">08:00 AM</td>
+                                            <td class="text-sm">Liquid loss 1000 Litre</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-sm">02/02/2020</td>
+                                            <td class="text-sm">08:00 AM</td>
+                                            <td class="text-sm">Liquid loss 1000 Litre</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-sm">02/02/2020</td>
+                                            <td class="text-sm">08:00 AM</td>
+                                            <td class="text-sm">Liquid loss 1000 Litre</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-sm">02/02/2020</td>
+                                            <td class="text-sm">08:00 AM</td>
+                                            <td class="text-sm">Liquid loss 1000 Litre</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-sm">02/02/2020</td>
+                                            <td class="text-sm">08:00 AM</td>
+                                            <td class="text-sm">Liquid loss 1000 Litre</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-sm">02/02/2020</td>
+                                            <td class="text-sm">08:00 AM</td>
+                                            <td class="text-sm">Liquid loss 1000 Litre</td>
+                                        </tr>      
+                                    </tbody>
+                                </table>
+                            </div>                                  
+
                             
                         </div>
                     </div>
