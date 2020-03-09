@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="build/tailwind.css">
   <script src="js/jquery.js"></script>
+  <script src="js/gauge.min.js"></script>
   <title>Skid Tank Monitoring System</title>
 </head>
 <body>
@@ -19,9 +20,11 @@
                 
                 <div id="navigation-wrapper" class="w-full bg-white shadow-xl"></div>
                 
-                <div id="header-section" class="w-full md:max-w-3xl mx-auto md:py-8">
-                  <span class="text-xl leading-none font-bold">Bintulu Plantations Berhad</span>
-                  <span class="text-sm leading-tight md:ml-2">Skid Tank Monitoring Platform</span>
+                <div class="header-wrapper bg-gray-800 mb-8">
+                    <div id="header-section" class="w-full md:max-w-3xl mx-auto p-4 ">
+                    <span class="text-xl text-white leading-none">Bintulu Plantations Berhad</span>
+                    <span class="text-sm text-blue-200 leading-tight md:ml-2">Skid Tank Monitoring Platform</span>
+                    </div>
                 </div>
 
                 <div id="dashboard-wrapper" class="p-4 md:p-0 md:max-w-3xl md:mx-auto md:flex">
@@ -31,7 +34,7 @@
                         <div class="md:flex flex-row mb-6">
 
                             <div class=" w-full md:flex-col bg-gray-100 md:mr-0 md:mr-4 mb-2 md:mb-0 px-4 py-2 rounded-lg">
-                                <h1 class="text-2xl text-orange-600">65.000L <span class="text-base font-light">Half</span></h1>
+                                <h1 class="text-2xl text-orange-600">55.000L <span class="text-base font-light">Half</span></h1>
                                 <span class="text-sm">Current Capacity</span>
                             </div>
 
@@ -51,8 +54,8 @@
                             <!-- Tank 01 Widget -->
                             <div class="md:w-1/2 w-full flex-col">
                                 <div class="widget-header shadow-lg bg-gray-100 px-3 py-1 border-gray-400 rounded-t-lg hover:bg-blue-100 cursor-pointer flex justify-between align-middle">
-                                    <h3 class="text-gray-700">
-                                        <a href="zonedetail.html">Tank 01</a>
+                                    <h3 class="text-red-600">
+                                        <a href="zonedetail.html">Tank 01 - Low</a>
                                     </h3>
                                     <div class="indicator inline">
                                         <!-- icon power -->
@@ -62,16 +65,45 @@
                                         <span class="w-3 h-3 bg-green-500 inline-flex rounded-full"></span>
                                     </div>
                                 </div>
-                                <div class="widget-body bg-red-600 text-white border-t-0 mb-4 rounded-b-lg shadow-lg p-6">
+                                <div class="widget-body bg-white border-t-0 rounded-b-lg shadow-lg p-6 pb-3">
 
-                                    <span class="text-3xl font-bold block leading-tight">15.000L</span>
-                                    <span class="block text-sm">
-                                        <svg class="inline-block" style="fill:white;" enable-background="new 0 0 32 32" height="16px" viewBox="0 0 32 32" width="16px"><g><path d="M16,30c-3.74,0-7.255-1.456-9.899-4.101C1.779,21.578,0.752,15.025,3.547,9.595C3.8,9.104,4.402,8.911,4.894,9.163   s0.685,0.855,0.432,1.347C2.93,15.164,3.81,20.78,7.515,24.485C9.781,26.752,12.794,28,16,28c3.205,0,6.219-1.248,8.485-3.515   S28,19.205,28,16c0-3.206-1.248-6.219-3.515-8.485S19.206,4,16,4c-3.206,0-6.219,1.249-8.485,3.515   c-0.391,0.391-1.023,0.391-1.414,0s-0.391-1.023,0-1.414C8.745,3.457,12.26,2,16,2c3.74,0,7.256,1.457,9.899,4.101   C28.544,8.745,30,12.26,30,16c0,3.739-1.456,7.255-4.101,9.899C23.256,28.544,19.74,30,16,30z"/></g><g><path d="M16,20c-1.068,0-2.073-0.416-2.829-1.172c-1.56-1.56-1.56-4.097,0-5.656c1.257-1.257,7.272-3.639,8.465-4.104   c0.371-0.144,0.79-0.056,1.07,0.225s0.369,0.7,0.225,1.07c-0.465,1.193-2.847,7.209-4.104,8.465C18.073,19.584,17.068,20,16,20z    M20.188,11.813c-2.453,1.028-5.064,2.235-5.602,2.773c-0.78,0.78-0.78,2.048,0,2.828c0.756,0.756,2.073,0.756,2.829,0   C17.952,16.875,19.16,14.266,20.188,11.813z"/></g></svg>                                        
-                                         Low Capacity</span>
-                                    <span class="text-3xl mt-4 block leading-tight">0.75m</span>
-                                    <span class="block text-sm">
-                                        <svg class="inline-block" viewBox="0 0 48 48" width="16px" ><defs><style>.cls-1{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><path class="cls-1" d="M11.23,18C8.86,21.42,7,25.12,7,29.54A17.23,17.23,0,0,0,24,47,17.22,17.22,0,0,0,41,29.54c0-5.72-2.84-9.66-6.06-14L24.18,1c-0.19-.26-3.74,4.61-4,5q-2,2.69-4,5.41C14.51,13.59,12.76,15.73,11.23,18Z"/></svg>                                     
-                                         Water Level</span>                                    
+                                    <div class="flex">
+                                        <div class="w-1/2 mr-6">
+
+                                        <canvas data-type="radial-gauge"
+                                            data-value="10000"
+                                            data-height="150"
+                                            data-units="Liter"
+                                            data-min-value="0"
+                                            data-max-value="50000"
+                                            data-value-box="false"
+                                            data-start-angle="45"
+                                            data-ticks-angle="270"
+                                            data-major-ticks="0,10000,20000,30000,40000,50000"
+                                            data-highlights='[
+                                                {"from": 40000, "to": 50000, "color": "green"},
+                                                {"from": 0, "to": 10000, "color": "red"}
+                                            ]'
+                                            data-border-shadow-width="0"
+                                            data-borders="false"
+                                            data-needle-type="arrow"
+                                            data-needle-width="3"
+                                            data-needle-circle-size="10"
+                                            data-needle-circle-outer="true"
+                                            data-needle-circle-inner="true"
+                                        ></canvas>                                            
+
+                                        </div>
+                                        <div class="w-1/2 z-10">
+
+                                            <span class="text-2xl leading-tight text-red-600 font-bold ">10.000L</span>
+                                            <span class="block text-sm ">Liquid Capacity</span>
+                                            <span class="text-2xl mt-4 block leading-tight text-red-600 font-bold">0.75m</span>
+                                            <span class="block text-sm">Water Level</span>               
+
+                                        </div>                                        
+                                    </div>
+
                                 </div>
                             </div>
 
@@ -79,7 +111,7 @@
                             <div class="md:w-1/2 w-full md:ml-6 flex-col">
                                 <div class="widget-header shadow-lg bg-gray-100 px-3 py-1 border-gray-400 rounded-t-lg hover:bg-blue-100 cursor-pointer flex justify-between align-middle">
                                     <h3 class="text-gray-700">
-                                        <a href="zonedetail.html">Tank 02</a>
+                                        <a href="zonedetail.html">Tank 02 - Norml</a>
                                     </h3>
                                     <div class="indicator inline">
                                         <!-- icon power -->
@@ -89,16 +121,45 @@
                                         <span class="w-3 h-3 bg-red-500 inline-flex rounded-full"></span>
                                     </div>
                                 </div>
-                                <div class="widget-body bg-green-600 text-white border-t-0 mb-4 rounded-b-lg shadow-lg p-6">
+                                <div class="widget-body bg-white border-t-0 rounded-b-lg shadow-lg p-6 pb-3">
 
-                                    <span class="text-3xl font-bold block leading-tight">50.000L</span>
-                                    <span class="block text-sm">
-                                        <svg class="inline-block" style="fill:white;" enable-background="new 0 0 32 32" height="16px" viewBox="0 0 32 32" width="16px"><g><path d="M16,30c-3.74,0-7.255-1.456-9.899-4.101C1.779,21.578,0.752,15.025,3.547,9.595C3.8,9.104,4.402,8.911,4.894,9.163   s0.685,0.855,0.432,1.347C2.93,15.164,3.81,20.78,7.515,24.485C9.781,26.752,12.794,28,16,28c3.205,0,6.219-1.248,8.485-3.515   S28,19.205,28,16c0-3.206-1.248-6.219-3.515-8.485S19.206,4,16,4c-3.206,0-6.219,1.249-8.485,3.515   c-0.391,0.391-1.023,0.391-1.414,0s-0.391-1.023,0-1.414C8.745,3.457,12.26,2,16,2c3.74,0,7.256,1.457,9.899,4.101   C28.544,8.745,30,12.26,30,16c0,3.739-1.456,7.255-4.101,9.899C23.256,28.544,19.74,30,16,30z"/></g><g><path d="M16,20c-1.068,0-2.073-0.416-2.829-1.172c-1.56-1.56-1.56-4.097,0-5.656c1.257-1.257,7.272-3.639,8.465-4.104   c0.371-0.144,0.79-0.056,1.07,0.225s0.369,0.7,0.225,1.07c-0.465,1.193-2.847,7.209-4.104,8.465C18.073,19.584,17.068,20,16,20z    M20.188,11.813c-2.453,1.028-5.064,2.235-5.602,2.773c-0.78,0.78-0.78,2.048,0,2.828c0.756,0.756,2.073,0.756,2.829,0   C17.952,16.875,19.16,14.266,20.188,11.813z"/></g></svg>                                        
-                                         Normal Capacity</span>
-                                    <span class="text-3xl mt-4 block leading-tight">2.00m</span>
-                                    <span class="block text-sm">
-                                        <svg class="inline-block" viewBox="0 0 48 48" width="16px" ><defs><style>.cls-1{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><path class="cls-1" d="M11.23,18C8.86,21.42,7,25.12,7,29.54A17.23,17.23,0,0,0,24,47,17.22,17.22,0,0,0,41,29.54c0-5.72-2.84-9.66-6.06-14L24.18,1c-0.19-.26-3.74,4.61-4,5q-2,2.69-4,5.41C14.51,13.59,12.76,15.73,11.23,18Z"/></svg>                                     
-                                         Water Level</span>                                    
+                                    <div class="flex">
+                                        <div class="w-1/2 mr-6">
+
+                                        <canvas data-type="radial-gauge"
+                                            data-value="45000"
+                                            data-height="150"
+                                            data-units="Liter"
+                                            data-min-value="0"
+                                            data-max-value="50000"
+                                            data-value-box="false"
+                                            data-start-angle="45"
+                                            data-ticks-angle="270"
+                                            data-major-ticks="0,10000,20000,30000,40000,50000"
+                                            data-highlights='[
+                                                {"from": 40000, "to": 50000, "color": "green"},
+                                                {"from": 0, "to": 10000, "color": "red"}
+                                            ]'
+                                            data-border-shadow-width="0"
+                                            data-borders="false"
+                                            data-needle-type="arrow"
+                                            data-needle-width="3"
+                                            data-needle-circle-size="10"
+                                            data-needle-circle-outer="true"
+                                            data-needle-circle-inner="true"
+                                        ></canvas>                                            
+
+                                        </div>
+                                        <div class="w-1/2 z-10">
+
+                                            <span class="text-2xl leading-tight text-green-600 font-bold ">45.000L</span>
+                                            <span class="block text-sm ">Liquid Capacity</span>
+                                            <span class="text-2xl mt-4 block leading-tight text-green-600 font-bold">1.75m</span>
+                                            <span class="block text-sm">Water Level</span>               
+
+                                        </div>                                        
+                                    </div>                                    
+                                    
                                 </div>
                             </div>
                         </div>                        
