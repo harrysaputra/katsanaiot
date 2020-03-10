@@ -608,7 +608,7 @@ body {
 }
 
 h1,h2,h3,h4,h5 {
-  font-family: Signika;
+  font-family: Roboto;
 }
 
 .container {
@@ -3790,7 +3790,7 @@ h1,h2,h3,h4,h5 {
 }
 
 .font-title {
-  font-family: Signika;
+  font-family: Roboto;
 }
 
 .font-hairline {
@@ -14631,7 +14631,7 @@ h1,h2,h3,h4,h5 {
   }
 
   .sm\:font-title {
-    font-family: Signika;
+    font-family: Roboto;
   }
 
   .sm\:font-hairline {
@@ -25403,7 +25403,7 @@ h1,h2,h3,h4,h5 {
   }
 
   .md\:font-title {
-    font-family: Signika;
+    font-family: Roboto;
   }
 
   .md\:font-hairline {
@@ -36175,7 +36175,7 @@ h1,h2,h3,h4,h5 {
   }
 
   .lg\:font-title {
-    font-family: Signika;
+    font-family: Roboto;
   }
 
   .lg\:font-hairline {
@@ -46947,7 +46947,7 @@ h1,h2,h3,h4,h5 {
   }
 
   .xl\:font-title {
-    font-family: Signika;
+    font-family: Roboto;
   }
 
   .xl\:font-hairline {

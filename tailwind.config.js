@@ -2,7 +2,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'body' : 'Roboto',
-      'title' : 'Signika',
+      'title' : 'Roboto',
     },
     extend: {},
   },
